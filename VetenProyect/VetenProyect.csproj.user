@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Compile Update="InterfazInserccion\Inventarios\AlimentosSuplementosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InterfazInserccion\Inventarios\DocumentosAdministrativosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InterfazInserccion\Inventarios\MaterialMedicoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InterfazInserccion\Inventarios\MedicamentoVacunaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InterfazInserccion\Inventarios\AddProductosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InterfazInserccion\Registros\CitasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InterfazInserccion\Registros\PersonalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InterfazInserccion\Registros\ProveedorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InterfazInserccion\Registros\TransaccionesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Interfaz\LogInForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Interfaz\DataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Interfaz\ShowDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Interfaz\RegisterMascot.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Interfaz\Citas&amp;Recordatorios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Interfaz\ServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Interfaz\PlanearCita1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Interfaz\PlanearCita2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Interfaz\PlanearCita3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Interfaz\Form15.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Interfaz\ProductoForn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Interfaz\PayServiceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Interfaz\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Interfaz\ServicesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Interfaz\RegisterForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+</Project>

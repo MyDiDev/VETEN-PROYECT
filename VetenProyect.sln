@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35327.3
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetenProyect", "VetenProyect\VetenProyect.csproj", "{212AEC16-2715-460A-8AE9-743C43537743}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logica", "Logica\Logica.csproj", "{6886449F-3637-49D5-8F6C-C5CC251F0002}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Datos", "Datos\Datos.csproj", "{4395981F-2516-48C0-90AF-2AB2585611B5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{212AEC16-2715-460A-8AE9-743C43537743}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{212AEC16-2715-460A-8AE9-743C43537743}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{212AEC16-2715-460A-8AE9-743C43537743}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{212AEC16-2715-460A-8AE9-743C43537743}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6886449F-3637-49D5-8F6C-C5CC251F0002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6886449F-3637-49D5-8F6C-C5CC251F0002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6886449F-3637-49D5-8F6C-C5CC251F0002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6886449F-3637-49D5-8F6C-C5CC251F0002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4395981F-2516-48C0-90AF-2AB2585611B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4395981F-2516-48C0-90AF-2AB2585611B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4395981F-2516-48C0-90AF-2AB2585611B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4395981F-2516-48C0-90AF-2AB2585611B5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4F985FC5-54B3-424A-8B66-D562DE766AFA}
+	EndGlobalSection
+EndGlobal
