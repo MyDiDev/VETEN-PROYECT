@@ -2,6 +2,7 @@
 using System.Data;
 using System.Diagnostics.CodeAnalysis;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Datos
 {
@@ -184,7 +185,7 @@ namespace Datos
 
         public bool AgregarCitaRecordatorio(DateTime fechaHora, string tipo, int idCliente, int idMascota,
                               string motivo, string descripcion, bool notificacionEnviada,
-                              DateTime? fechaNotificacion, string estado, DateTime creadoEn, DateTime actualizadoEn)
+                              DateTime fechaNotificacion, string estado, DateTime creadoEn, DateTime actualizadoEn)
         {
             using (SqlConnection conn = new SqlConnection("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
             {
@@ -199,7 +200,7 @@ namespace Datos
                     cmd.Parameters.AddWithValue("@Motivo", motivo);
                     cmd.Parameters.AddWithValue("@Descripcion", descripcion);
                     cmd.Parameters.AddWithValue("@NotificacionEnviada", notificacionEnviada);
-                    cmd.Parameters.AddWithValue("@FechaNotificacion", (object)fechaNotificacion ?? DBNull.Value);
+                    cmd.Parameters.AddWithValue("@FechaNotificacion",fechaNotificacion.Date);
                     cmd.Parameters.AddWithValue("@Estado", estado);
                     cmd.Parameters.AddWithValue("@CreadoEn", creadoEn);
                     cmd.Parameters.AddWithValue("@ActualizadoEn", actualizadoEn);
@@ -213,6 +214,9 @@ namespace Datos
 
         public DataTable GetCitasRecordatorios(int ClientID, int PetID)
         {
+
+            DataTable dataTable = new();
+            
             try
             {
                 using (SqlConnection conn = new SqlConnection("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
@@ -222,7 +226,6 @@ namespace Datos
                     using (SqlCommand cmd = new($"SELECT * FROM Citas_Recordatorios WHERE ID_Cliente = {ClientID} AND ID_Mascota = {PetID};", conn))
                     {
                         SqlDataAdapter adapter = new(cmd);
-                        DataTable dataTable = new();
 
                         adapter.Fill(dataTable);
                         return dataTable;
@@ -231,7 +234,7 @@ namespace Datos
             }
             catch (Exception)
             {
-                return null;
+                return dataTable;
             }
         }
 
