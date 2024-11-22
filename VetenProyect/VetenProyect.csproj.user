@@ -28,6 +28,9 @@
     <Compile Update="InterfazInserccion\Registros\TransaccionesForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="InterfazInserccion\Registros\Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Interfaz\LogInForm.cs">
       <SubType>Form</SubType>
     </Compile>

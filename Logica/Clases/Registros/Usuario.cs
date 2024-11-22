@@ -2,7 +2,7 @@
 
 namespace Logica.Clases.Registros
 {
-    public class Usuario
+    public class Usuarios
     {
         string nombre;
         string direccion;
@@ -10,7 +10,7 @@ namespace Logica.Clases.Registros
         string email;
         string clave;
 
-        public Usuario(string nombre, string direccion, string telefono, string email, string clave)
+        public Usuarios(string nombre, string direccion, string telefono, string email, string clave)
         {
             this.nombre = nombre;
             this.direccion = direccion;

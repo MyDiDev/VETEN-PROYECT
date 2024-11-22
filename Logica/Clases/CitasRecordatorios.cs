@@ -12,14 +12,14 @@ namespace Logica.Clases
         private string Motivo;
         private string Descripcion;
         private bool NotificacionEnviada;
-        private DateTime? FechaNotificacion;
+        private DateTime FechaNotificacion;
         private string Estado;
         private DateTime CreadoEn;
         private DateTime ActualizadoEn;
 
         public CitasRecordatorios(DateTime fechaHora, string tipo, int idCliente, int idMascota,
                                   string motivo, string descripcion, bool notificacionEnviada,
-                                  DateTime? fechaNotificacion, string estado, DateTime creadoEn, DateTime actualizadoEn)
+                                  DateTime fechaNotificacion, string estado, DateTime creadoEn, DateTime actualizadoEn)
         {
             FechaHora = fechaHora;
             Tipo = tipo;
@@ -33,12 +33,6 @@ namespace Logica.Clases
             CreadoEn = creadoEn;
             ActualizadoEn = actualizadoEn;
         }
-
-        public CitasRecordatorios()
-        {
-
-        }
-
 
         Connection connection = new();
 
