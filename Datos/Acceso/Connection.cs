@@ -184,14 +184,13 @@ namespace Datos
         //CITAS : CITAS/RECORDATORIOS
 
         public bool AgregarCitaRecordatorio(DateTime fechaHora, string tipo, int idCliente, int idMascota,
-                              string motivo, string descripcion, bool notificacionEnviada,
-                              DateTime fechaNotificacion, string estado, DateTime creadoEn, DateTime actualizadoEn)
+                              string motivo, string descripcion, string estado)
         {
             using (SqlConnection conn = new SqlConnection("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
             {
                 conn.Open();
 
-                using (SqlCommand cmd = new("INSERT INTO Citas_Recordatorios (Fecha_Hora, Tipo, ID_Cliente, ID_Mascota, Motivo, Descripcion, Notificacion_Enviada, Fecha_Notificacion, Estado, Creado_en, Actualizado_en) VALUES (@FechaHora, @Tipo, @IDCliente, @IDMascota, @Motivo, @Descripcion, @NotificacionEnviada, @FechaNotificacion, @Estado, @CreadoEn, @ActualizadoEn)", conn))
+                using (SqlCommand cmd = new("INSERT INTO Citas_Recordatorios (Fecha_Hora, Tipo, ID_Cliente, ID_Mascota, Motivo, Descripcion, Estado) VALUES (@FechaHora, @Tipo, @IDCliente, @IDMascota, @Motivo, @Descripcion, @NotificacionEnviada, @FechaNotificacion, @Estado, @CreadoEn, @ActualizadoEn)", conn))
                 {
                     cmd.Parameters.AddWithValue("@FechaHora", fechaHora);
                     cmd.Parameters.AddWithValue("@Tipo", tipo);
@@ -199,11 +198,7 @@ namespace Datos
                     cmd.Parameters.AddWithValue("@IDMascota", idMascota);
                     cmd.Parameters.AddWithValue("@Motivo", motivo);
                     cmd.Parameters.AddWithValue("@Descripcion", descripcion);
-                    cmd.Parameters.AddWithValue("@NotificacionEnviada", notificacionEnviada);
-                    cmd.Parameters.AddWithValue("@FechaNotificacion",fechaNotificacion.Date);
                     cmd.Parameters.AddWithValue("@Estado", estado);
-                    cmd.Parameters.AddWithValue("@CreadoEn", creadoEn);
-                    cmd.Parameters.AddWithValue("@ActualizadoEn", actualizadoEn);
 
                     cmd.ExecuteNonQuery();
 

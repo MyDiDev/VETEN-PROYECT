@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4395981F-2516-48C0-90AF-2AB2585611B5}|Datos\\Datos.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\datos\\acceso\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4395981F-2516-48C0-90AF-2AB2585611B5}|Datos\\Datos.csproj|solutionrelative:datos\\acceso\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6886449F-3637-49D5-8F6C-C5CC251F0002}|Logica\\Logica.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\logica\\clases\\registros\\personal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6886449F-3637-49D5-8F6C-C5CC251F0002}|Logica\\Logica.csproj|solutionrelative:logica\\clases\\registros\\personal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\vetenproyect\\interfaz\\planearcita2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\planearcita2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -19,12 +11,20 @@
       "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\planearcita1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\vetenproyect\\interfaz\\planearcita2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\planearcita2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\vetenproyect\\interfaz\\planearcita1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\planearcita1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\vetenproyect\\interfaz\\planearcita2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\planearcita2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4395981F-2516-48C0-90AF-2AB2585611B5}|Datos\\Datos.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\datos\\acceso\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4395981F-2516-48C0-90AF-2AB2585611B5}|Datos\\Datos.csproj|solutionrelative:datos\\acceso\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6886449F-3637-49D5-8F6C-C5CC251F0002}|Logica\\Logica.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\logica\\clases\\registros\\personal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6886449F-3637-49D5-8F6C-C5CC251F0002}|Logica\\Logica.csproj|solutionrelative:logica\\clases\\registros\\personal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\vetenproyect\\interfaz\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -46,37 +46,37 @@
       "DocumentGroups": [
         {
           "DockedWidth": 544,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Connection.cs",
               "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\Datos\\Acceso\\Connection.cs",
               "RelativeDocumentMoniker": "Datos\\Acceso\\Connection.cs",
               "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\Datos\\Acceso\\Connection.cs",
               "RelativeToolTip": "Datos\\Acceso\\Connection.cs",
-              "ViewState": "AgIAAMwBAAAAAAAAAAAQwOMBAAAkAAAAAAAAAA==",
+              "ViewState": "AgIAAMMBAAAAAAAAAAAzwOMBAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T22:00:40.74Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "PlanearCita1.cs",
               "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\PlanearCita1.cs",
               "RelativeDocumentMoniker": "VetenProyect\\Interfaz\\PlanearCita1.cs",
               "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\PlanearCita1.cs",
               "RelativeToolTip": "VetenProyect\\Interfaz\\PlanearCita1.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAMwDEAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAIwDEAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T21:52:56.32Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 3,
               "Title": "PlanearCita1.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\PlanearCita1.cs",
               "RelativeDocumentMoniker": "VetenProyect\\Interfaz\\PlanearCita1.cs",
@@ -88,7 +88,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "PlanearCita2.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\PlanearCita2.cs",
               "RelativeDocumentMoniker": "VetenProyect\\Interfaz\\PlanearCita2.cs",
@@ -113,20 +113,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "PlanearCita2.cs",
               "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\PlanearCita2.cs",
               "RelativeDocumentMoniker": "VetenProyect\\Interfaz\\PlanearCita2.cs",
               "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\PlanearCita2.cs",
               "RelativeToolTip": "VetenProyect\\Interfaz\\PlanearCita2.cs",
-              "ViewState": "AgIAADkAAAAAAAAAAAAswEYAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-23T18:22:32.604Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Personal.cs",
               "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\Logica\\Clases\\Registros\\Personal.cs",
               "RelativeDocumentMoniker": "Logica\\Clases\\Registros\\Personal.cs",

@@ -10,7 +10,11 @@ namespace VetenProyect
         }
 
         public string TipoCita;
-
+        public string clientName;
+        public string petName;
+        public string petState;
+        public string petDescription;
+        public string reasonDescription;
 
         private Form activeForm = null;
 
@@ -58,6 +62,14 @@ namespace VetenProyect
 
             PlanearCita3 f5 = new PlanearCita3();
             panel1.BringToFront();
+            f5.TipoCita = TipoCita;
+            f5.clientName = clientName;
+            f5.petName = petName;
+            f5.petState = petState;
+            f5.petDescription = petDescription;
+            f5.reasonDescription = reasonDescription;
+            f5.appointmentDate = selectedDate;
+            f5.doctor = doctors.Text;
             OpenForm(f5);
         }
 

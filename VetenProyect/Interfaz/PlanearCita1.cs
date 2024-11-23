@@ -48,7 +48,11 @@ namespace VetenProyect
             }
 
             PlanearCita2 f4 = new PlanearCita2();
-            f4.Cargo = reason.Text;
+            f4.clientName = clientName.Text;
+            f4.petName = petName.Text;
+            f4.reasonDescription = petStateDescription.Text;
+            f4.petDescription = petDescription.Text;
+            f4.TipoCita = reason.Text;
             panel1.BringToFront();
             OpenForm(f4);
         }

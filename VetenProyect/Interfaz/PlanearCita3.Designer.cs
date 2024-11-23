@@ -33,18 +33,18 @@
             label2 = new Label();
             checkBox1 = new CheckBox();
             checkBox2 = new CheckBox();
-            textBox4 = new TextBox();
+            cardName = new TextBox();
             label6 = new Label();
-            textBox1 = new TextBox();
+            cardNum = new TextBox();
             label3 = new Label();
-            textBox2 = new TextBox();
+            cvv = new TextBox();
             label4 = new Label();
-            textBox3 = new TextBox();
+            dateExpired = new TextBox();
             label5 = new Label();
             label7 = new Label();
             button1 = new Button();
             label9 = new Label();
-            label10 = new Label();
+            priceLabel = new Label();
             pictureBox3 = new PictureBox();
             pictureBox4 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
@@ -103,17 +103,17 @@
             checkBox2.Text = "VISA";
             checkBox2.UseVisualStyleBackColor = true;
             // 
-            // textBox4
+            // cardName
             // 
-            textBox4.Anchor = AnchorStyles.None;
-            textBox4.BackColor = Color.Ivory;
-            textBox4.BorderStyle = BorderStyle.FixedSingle;
-            textBox4.ForeColor = Color.Black;
-            textBox4.Location = new Point(175, 428);
-            textBox4.Margin = new Padding(3, 4, 3, 4);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(234, 27);
-            textBox4.TabIndex = 16;
+            cardName.Anchor = AnchorStyles.None;
+            cardName.BackColor = Color.Ivory;
+            cardName.BorderStyle = BorderStyle.FixedSingle;
+            cardName.ForeColor = Color.Black;
+            cardName.Location = new Point(175, 428);
+            cardName.Margin = new Padding(3, 4, 3, 4);
+            cardName.Name = "cardName";
+            cardName.Size = new Size(234, 27);
+            cardName.TabIndex = 16;
             // 
             // label6
             // 
@@ -126,17 +126,17 @@
             label6.TabIndex = 15;
             label6.Text = "NOMBRE TITULAR:";
             // 
-            // textBox1
+            // cardNum
             // 
-            textBox1.Anchor = AnchorStyles.None;
-            textBox1.BackColor = Color.Ivory;
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.ForeColor = Color.Black;
-            textBox1.Location = new Point(175, 550);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(234, 27);
-            textBox1.TabIndex = 18;
+            cardNum.Anchor = AnchorStyles.None;
+            cardNum.BackColor = Color.Ivory;
+            cardNum.BorderStyle = BorderStyle.FixedSingle;
+            cardNum.ForeColor = Color.Black;
+            cardNum.Location = new Point(175, 550);
+            cardNum.Margin = new Padding(3, 4, 3, 4);
+            cardNum.Name = "cardNum";
+            cardNum.Size = new Size(234, 27);
+            cardNum.TabIndex = 18;
             // 
             // label3
             // 
@@ -149,17 +149,17 @@
             label3.TabIndex = 17;
             label3.Text = "CODIGO DE VERFICACION";
             // 
-            // textBox2
+            // cvv
             // 
-            textBox2.Anchor = AnchorStyles.None;
-            textBox2.BackColor = Color.Ivory;
-            textBox2.BorderStyle = BorderStyle.FixedSingle;
-            textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(495, 550);
-            textBox2.Margin = new Padding(3, 4, 3, 4);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(234, 27);
-            textBox2.TabIndex = 20;
+            cvv.Anchor = AnchorStyles.None;
+            cvv.BackColor = Color.Ivory;
+            cvv.BorderStyle = BorderStyle.FixedSingle;
+            cvv.ForeColor = Color.Black;
+            cvv.Location = new Point(495, 550);
+            cvv.Margin = new Padding(3, 4, 3, 4);
+            cvv.Name = "cvv";
+            cvv.Size = new Size(234, 27);
+            cvv.TabIndex = 20;
             // 
             // label4
             // 
@@ -172,17 +172,17 @@
             label4.TabIndex = 19;
             label4.Text = "NUMERO DE TARJETA:";
             // 
-            // textBox3
+            // dateExpired
             // 
-            textBox3.Anchor = AnchorStyles.None;
-            textBox3.BackColor = Color.Ivory;
-            textBox3.BorderStyle = BorderStyle.FixedSingle;
-            textBox3.ForeColor = Color.Black;
-            textBox3.Location = new Point(495, 428);
-            textBox3.Margin = new Padding(3, 4, 3, 4);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(234, 27);
-            textBox3.TabIndex = 22;
+            dateExpired.Anchor = AnchorStyles.None;
+            dateExpired.BackColor = Color.Ivory;
+            dateExpired.BorderStyle = BorderStyle.FixedSingle;
+            dateExpired.ForeColor = Color.Black;
+            dateExpired.Location = new Point(495, 428);
+            dateExpired.Margin = new Padding(3, 4, 3, 4);
+            dateExpired.Name = "dateExpired";
+            dateExpired.Size = new Size(234, 27);
+            dateExpired.TabIndex = 22;
             // 
             // label5
             // 
@@ -235,17 +235,17 @@
             label9.TabIndex = 28;
             label9.Text = "MONTO A PAGAR:";
             // 
-            // label10
+            // priceLabel
             // 
-            label10.Anchor = AnchorStyles.None;
-            label10.AutoSize = true;
-            label10.Font = new Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label10.ForeColor = Color.GreenYellow;
-            label10.Location = new Point(490, 612);
-            label10.Name = "label10";
-            label10.Size = new Size(118, 32);
-            label10.TabIndex = 29;
-            label10.Text = "2000RD$";
+            priceLabel.Anchor = AnchorStyles.None;
+            priceLabel.AutoSize = true;
+            priceLabel.Font = new Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            priceLabel.ForeColor = Color.GreenYellow;
+            priceLabel.Location = new Point(490, 612);
+            priceLabel.Name = "priceLabel";
+            priceLabel.Size = new Size(118, 32);
+            priceLabel.TabIndex = 29;
+            priceLabel.Text = "2000RD$";
             // 
             // pictureBox3
             // 
@@ -281,17 +281,17 @@
             ClientSize = new Size(916, 768);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
-            Controls.Add(label10);
+            Controls.Add(priceLabel);
             Controls.Add(label9);
             Controls.Add(button1);
             Controls.Add(label7);
-            Controls.Add(textBox3);
+            Controls.Add(dateExpired);
             Controls.Add(label5);
-            Controls.Add(textBox2);
+            Controls.Add(cvv);
             Controls.Add(label4);
-            Controls.Add(textBox1);
+            Controls.Add(cardNum);
             Controls.Add(label3);
-            Controls.Add(textBox4);
+            Controls.Add(cardName);
             Controls.Add(label6);
             Controls.Add(checkBox2);
             Controls.Add(checkBox1);
@@ -314,18 +314,18 @@
         private Label label2;
         private CheckBox checkBox1;
         private CheckBox checkBox2;
-        private TextBox textBox4;
+        private TextBox cardName;
         private Label label6;
-        private TextBox textBox1;
+        private TextBox cardNum;
         private Label label3;
-        private TextBox textBox2;
+        private TextBox cvv;
         private Label label4;
-        private TextBox textBox3;
+        private TextBox dateExpired;
         private Label label5;
         private Label label7;
         private Button button1;
         private Label label9;
-        private Label label10;
+        private Label priceLabel;
         private PictureBox pictureBox3;
         private PictureBox pictureBox4;
     }
