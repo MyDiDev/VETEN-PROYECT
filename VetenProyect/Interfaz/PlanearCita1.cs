@@ -1,12 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Microsoft.Windows.Themes;
+using System;
 
 namespace VetenProyect
 {
@@ -18,21 +11,46 @@ namespace VetenProyect
             MaximizeBox = false;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private Form activeForm = null;
+        private void OpenForm(Form form)
         {
-            if (string.IsNullOrEmpty(animalBox.Text) || string.IsNullOrEmpty(animalTypeBox.Text)
-                || string.IsNullOrEmpty(animalTypeRbox.Text) || string.IsNullOrEmpty(animalAge.Text) ||
-                string.IsNullOrEmpty(animalGender.Text) || string.IsNullOrEmpty(animalWeight.Text) ||
-                string.IsNullOrEmpty(userName.Text) || string.IsNullOrEmpty(userEmail.Text)
-                )
+            if (activeForm != null)
             {
-                MessageBox.Show("LLene el formulario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                activeForm.Close();
+                activeForm = null;
+                return;
             }
 
+            activeForm = form;
+            form.TopLevel = false;
+            form.FormBorderStyle = FormBorderStyle.None;
+            form.Dock = DockStyle.Fill;
+            panel1.Controls.Add(form);
+            panel1.Tag = form.Tag;
+            form.BringToFront();
+            form.Show();
+
+        }
+
+        private void CloseForms()
+        {
+            if (activeForm != null)
+                panel1.Controls.Remove(activeForm);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(clientName.Text) || string.IsNullOrEmpty(petName.Text) || 
+                string.IsNullOrEmpty(reason.Text) || string.IsNullOrEmpty(petDescription.Text) || string.IsNullOrEmpty(petStateDescription.Text))
+            {
+                MessageBox.Show("LLene el formulario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
             PlanearCita2 f4 = new PlanearCita2();
-            f4.ShowDialog();
-            Close();
+            f4.Cargo = reason.Text;
+            panel1.BringToFront();
+            OpenForm(f4);
         }
     }
 }

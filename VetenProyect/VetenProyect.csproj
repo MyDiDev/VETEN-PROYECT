@@ -32,8 +32,4 @@
     </EmbeddedResource>
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="InterfazInserccion\Historiales\" />
-  </ItemGroup>
-
 </Project>

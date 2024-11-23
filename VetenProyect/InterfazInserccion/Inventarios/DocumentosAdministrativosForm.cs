@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Windows.Media.Media3D;
-using Logica.Clases.Historiales;
-using Microsoft.VisualBasic;
+﻿using Logica.Clases.Historiales;
+
 
 namespace VetenProyect.InterfazInserccion.Inventarios
 {

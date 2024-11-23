@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form14));
             panelBarraLateral = new Panel();
+            closeFormBtn = new FontAwesome.Sharp.IconButton();
             adminMark = new FontAwesome.Sharp.IconButton();
             label6 = new Label();
             iconButton7 = new FontAwesome.Sharp.IconButton();
@@ -55,6 +56,7 @@
             // 
             panelBarraLateral.AutoScroll = true;
             panelBarraLateral.BackColor = Color.FromArgb(98, 130, 93);
+            panelBarraLateral.Controls.Add(closeFormBtn);
             panelBarraLateral.Controls.Add(adminMark);
             panelBarraLateral.Controls.Add(label6);
             panelBarraLateral.Controls.Add(iconButton7);
@@ -68,8 +70,28 @@
             panelBarraLateral.Dock = DockStyle.Left;
             panelBarraLateral.Location = new Point(0, 0);
             panelBarraLateral.Name = "panelBarraLateral";
-            panelBarraLateral.Size = new Size(383, 728);
+            panelBarraLateral.Size = new Size(383, 803);
             panelBarraLateral.TabIndex = 0;
+            // 
+            // closeFormBtn
+            // 
+            closeFormBtn.Anchor = AnchorStyles.None;
+            closeFormBtn.BackColor = Color.FromArgb(82, 110, 72);
+            closeFormBtn.Cursor = Cursors.Hand;
+            closeFormBtn.FlatAppearance.BorderSize = 0;
+            closeFormBtn.FlatStyle = FlatStyle.Flat;
+            closeFormBtn.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            closeFormBtn.ForeColor = SystemColors.ControlLightLight;
+            closeFormBtn.IconChar = FontAwesome.Sharp.IconChar.X;
+            closeFormBtn.IconColor = Color.Transparent;
+            closeFormBtn.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            closeFormBtn.Location = new Point(-2, 737);
+            closeFormBtn.Name = "closeFormBtn";
+            closeFormBtn.Size = new Size(385, 66);
+            closeFormBtn.TabIndex = 25;
+            closeFormBtn.Text = "Cerrar Ventana";
+            closeFormBtn.UseVisualStyleBackColor = false;
+            closeFormBtn.Click += closeFormBtn_Click;
             // 
             // adminMark
             // 
@@ -300,7 +322,7 @@
             formPanel.Dock = DockStyle.Fill;
             formPanel.Location = new Point(383, 0);
             formPanel.Name = "formPanel";
-            formPanel.Size = new Size(942, 728);
+            formPanel.Size = new Size(934, 803);
             formPanel.TabIndex = 25;
             // 
             // timeLabel
@@ -308,7 +330,7 @@
             timeLabel.Anchor = AnchorStyles.None;
             timeLabel.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
             timeLabel.ForeColor = SystemColors.ControlLightLight;
-            timeLabel.Location = new Point(244, 443);
+            timeLabel.Location = new Point(240, 480);
             timeLabel.Name = "timeLabel";
             timeLabel.Size = new Size(497, 109);
             timeLabel.TabIndex = 23;
@@ -324,7 +346,7 @@
             iconPictureBox5.IconColor = SystemColors.ControlLightLight;
             iconPictureBox5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconPictureBox5.IconSize = 255;
-            iconPictureBox5.Location = new Point(303, 168);
+            iconPictureBox5.Location = new Point(299, 205);
             iconPictureBox5.Name = "iconPictureBox5";
             iconPictureBox5.Size = new Size(360, 255);
             iconPictureBox5.SizeMode = PictureBoxSizeMode.Zoom;
@@ -362,12 +384,13 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1325, 728);
+            ClientSize = new Size(1317, 803);
             Controls.Add(formPanel);
             Controls.Add(panelBarraLateral);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form14";
             Text = "Main";
+            Load += Form14_Load;
             panelBarraLateral.ResumeLayout(false);
             panelBarraLateral.PerformLayout();
             formPanel.ResumeLayout(false);
@@ -396,5 +419,6 @@
         public FontAwesome.Sharp.IconButton btnInventario;
         public FontAwesome.Sharp.IconButton btnHistoriales;
         public FontAwesome.Sharp.IconButton iconButton7;
+        private FontAwesome.Sharp.IconButton closeFormBtn;
     }
 }

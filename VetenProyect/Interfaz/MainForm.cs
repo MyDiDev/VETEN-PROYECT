@@ -1,7 +1,4 @@
 ﻿using FontAwesome.Sharp;
-using System.Runtime.CompilerServices;
-using System.Runtime.Serialization;
-using System.Windows.Forms;
 
 namespace VetenProyect.Interfaz
 {
@@ -13,14 +10,31 @@ namespace VetenProyect.Interfaz
         public Form14()
         {
             InitializeComponent();
-            MinimumSize = new Size(874, 504);
+            MinimumSize = new Size(1335, 850);
+            FormClosing += mainForm_close;
+        }
+
+        private void mainForm_close(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Seguro quieres salir de la aplicacion?", "Salir De Aplicacion", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+                return;
+            }
+
+            e.Cancel = true;
         }
 
         private Form activeForm = null;
         private void OpenForm(Form form)
         {
             if (activeForm != null)
+            {
                 activeForm.Close();
+                formPanel.Controls.Remove(activeForm);
+                activeForm.Dispose();
+            }
 
             activeForm = form;
             form.TopLevel = false;
@@ -32,12 +46,20 @@ namespace VetenProyect.Interfaz
             form.Show();
         }
 
-        private void CloseForm()
+        private bool CloseForm()
         {
             if (activeForm != null)
-                activeForm.Close();
-                
-            formPanel.Controls.Remove(activeForm);
+            {
+                DialogResult result = MessageBox.Show("Seguro que quieres cerrar la ventana? esto puede hacer perder progreso", "ADVERTENCIA", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes) { formPanel.Controls.Remove(activeForm);  return true; }
+            }
+            return false;
+        }
+
+        private void closeFormBtn_Click(object sender, EventArgs e)
+        {
+            if (CloseForm() == true)
+                DisableButton();
         }
 
         private void productBtn_Click(object sender, EventArgs e)
@@ -106,7 +128,7 @@ namespace VetenProyect.Interfaz
 
         private void iconButton5_Click(object sender, EventArgs e)
         {
-             
+
         }
 
         private void iconButton1_Click(object sender, EventArgs e)
@@ -142,6 +164,11 @@ namespace VetenProyect.Interfaz
                 currentBtn.TextImageRelation = TextImageRelation.ImageBeforeText;
                 currentBtn.ImageAlign = ContentAlignment.MiddleLeft;
             }
+        }
+
+        private void Form14_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

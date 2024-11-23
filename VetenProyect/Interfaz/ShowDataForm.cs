@@ -1,7 +1,7 @@
 ﻿using Datos;
 using Logica.Clases.Interaccion_Datos;
-using System.Diagnostics.CodeAnalysis;
 using VetenProyect.InterfazInserccion;
+using VetenProyect.InterfazInserccion.Historiales;
 using VetenProyect.InterfazInserccion.Inventarios;
 using VetenProyect.InterfazInserccion.Registros;
 
@@ -12,6 +12,7 @@ namespace VetenProyect
         public ShowDataForm()
         {
             InitializeComponent();
+            MinimumSize = new Size(1103, 949);
         }
 
         InDatos datos = new();
@@ -25,7 +26,8 @@ namespace VetenProyect
                     medicamentoVacunaForm.ShowDialog();
                     break;
                 case "PACIENTES":
-
+                    PacienteForm pacienteForm = new();
+                    pacienteForm.ShowDialog();
                     break;
                 case "CITAS":
                     CitasForm citasForm = new();
@@ -36,14 +38,16 @@ namespace VetenProyect
                     materialMedicoForm.ShowDialog();
                     break;
                 case "CLIENTES":
-                    
+                    UsuarioForm usuario = new();
+                    usuario.ShowDialog();
                     break;
                 case "ALIMENTOS Y SUPLEMENTOS":
                     AlimentosSuplementosForm alimentosSuplementosForm = new();
                     alimentosSuplementosForm.ShowDialog();
                     break;
                 case "HISTORIAL MEDICO":
-
+                    HistorialMedicoForm historialMedicoForm = new();
+                    historialMedicoForm.ShowDialog();
                     break;
                 case "PROVEEDORES":
                     ProveedorForm proveedorForm = new();
@@ -54,20 +58,27 @@ namespace VetenProyect
                     productosForm.ShowDialog();
                     break;
                 case "DIAGNOSTICOS":
-
+                    DiagnosticoForm diagnosticoForm = new();
+                    diagnosticoForm.ShowDialog();
                     break;
                 case "PAGOS Y FACTURACION":
-
+                    TransaccionesForm transaccionesForm = new();
+                    transaccionesForm.ShowDialog();
                     break;
                 case "DOCUMENTOS Y MATERIAL ADMINISTRATIVO":
                     DocumentosAdministrativosForm documentoForm = new();
                     documentoForm.ShowDialog();
                     break;
                 case "VISITAS":
-
+                    VisitaForm visitaForm = new();
+                    visitaForm.ShowDialog();
                     break;
                 case "PERSONAL":
-
+                    PersonalForm personalForm = new();
+                    personalForm.ShowDialog();
+                    break;
+                default:
+                    MessageBox.Show("No se pudo encontrar Ventana de agregacion","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
                     break;
             }
             RecagarDatos();

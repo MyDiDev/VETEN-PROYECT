@@ -1,6 +1,6 @@
 ﻿namespace VetenProyect.InterfazInserccion.Registros
 {
-    partial class Usuario
+    partial class UsuarioForm
     {
         /// <summary>
         /// Required designer variable.

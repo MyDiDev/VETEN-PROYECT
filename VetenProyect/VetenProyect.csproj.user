@@ -1,6 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Compile Update="InterfazInserccion\Historiales\DiagnosticoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InterfazInserccion\Historiales\HistorialMedicoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InterfazInserccion\Historiales\PacienteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="InterfazInserccion\Historiales\VisitaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="InterfazInserccion\Inventarios\AlimentosSuplementosForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -28,7 +40,7 @@
     <Compile Update="InterfazInserccion\Registros\TransaccionesForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="InterfazInserccion\Registros\Usuario.cs">
+    <Compile Update="InterfazInserccion\Registros\UsuarioForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Interfaz\LogInForm.cs">

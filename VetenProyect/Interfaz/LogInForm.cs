@@ -1,4 +1,4 @@
-using Logica.Clases;
+using Logica.Clases.Extra;
 using VetenProyect.Interfaz;
 
 namespace VetenProyect

@@ -30,8 +30,6 @@
         {
             email = new TextBox();
             label5 = new Label();
-            mail = new TextBox();
-            cargo = new Label();
             phone = new TextBox();
             label3 = new Label();
             HorarioTrabajo = new TextBox();
@@ -41,6 +39,7 @@
             Certifications = new TextBox();
             label4 = new Label();
             button1 = new Button();
+            cargoo = new ComboBox();
             SuspendLayout();
             // 
             // email
@@ -61,22 +60,8 @@
             label5.TabIndex = 20;
             label5.Text = "Correo Electronico:";
             // 
-            // mail
+            // label
             // 
-            mail.Anchor = AnchorStyles.None;
-            mail.Location = new Point(441, 120);
-            mail.Name = "mail";
-            mail.Size = new Size(298, 27);
-            mail.TabIndex = 19;
-            // 
-            // cargo
-            // 
-            cargo.AutoSize = true;
-            cargo.Location = new Point(441, 82);
-            cargo.Name = "cargo";
-            cargo.Size = new Size(52, 20);
-            cargo.TabIndex = 18;
-            cargo.Text = "Cargo:";
             // 
             // phone
             // 
@@ -162,25 +147,34 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // Personal
+            // cargoo
+            // 
+            cargoo.FormattingEnabled = true;
+            cargoo.Items.AddRange(new object[] { "Consulta General (Chequeo de salud)", "Vacunación", "Desparacitación", "Emergencias", "Consulta de Dermatología (Problemas de piel)", "Consulta Odontológica", "Chequeo para Esterilización/Castración", "Exámenes de Laboratorio (Análisis de sangre, orina, etc.)", "Consulta de Comportamiento", "Atención Geriátrica", "Cirugía", "Atención de Urgencias Quirúrgicas", "Seguimiento Postoperatorio", "Consulta de Nutrición", "Pruebas de Diagnóstico por Imágenes (Radiografías, Ecografías)" });
+            cargoo.Location = new Point(441, 120);
+            cargoo.Name = "cargoo";
+            cargoo.Size = new Size(298, 28);
+            cargoo.TabIndex = 25;
+            // 
+            // PersonalForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(799, 657);
+            Controls.Add(cargoo);
             Controls.Add(button1);
             Controls.Add(Certifications);
             Controls.Add(label4);
             Controls.Add(email);
             Controls.Add(label5);
-            Controls.Add(mail);
-            Controls.Add(cargo);
             Controls.Add(phone);
             Controls.Add(label3);
             Controls.Add(HorarioTrabajo);
             Controls.Add(label2);
             Controls.Add(name);
             Controls.Add(label1);
-            Name = "Personal";
+            FormBorderStyle = FormBorderStyle.FixedDialog;
+            Name = "PersonalForm";
             Text = "Personal";
             ResumeLayout(false);
             PerformLayout();
@@ -201,5 +195,6 @@
         private TextBox Certifications;
         private Label label4;
         private Button button1;
+        private ComboBox cargoo;
     }
 }

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using Logica.Clases.Inventarios;
+﻿using Logica.Clases.Inventarios;
 
 namespace VetenProyect.InterfazInserccion.Inventarios
 {

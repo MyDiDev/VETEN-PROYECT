@@ -58,7 +58,7 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Segoe UI Black", 27.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(297, 9);
+            label1.Location = new Point(251, 45);
             label1.Name = "label1";
             label1.Size = new Size(373, 62);
             label1.TabIndex = 5;
@@ -69,7 +69,7 @@
             label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(377, 125);
+            label2.Location = new Point(347, 150);
             label2.Name = "label2";
             label2.Size = new Size(186, 20);
             label2.TabIndex = 6;
@@ -81,7 +81,7 @@
             checkBox1.AutoSize = true;
             checkBox1.Cursor = Cursors.Hand;
             checkBox1.ForeColor = SystemColors.ControlLightLight;
-            checkBox1.Location = new Point(317, 263);
+            checkBox1.Location = new Point(293, 300);
             checkBox1.Margin = new Padding(3, 4, 3, 4);
             checkBox1.Name = "checkBox1";
             checkBox1.Size = new Size(126, 24);
@@ -95,7 +95,7 @@
             checkBox2.AutoSize = true;
             checkBox2.Cursor = Cursors.Hand;
             checkBox2.ForeColor = SystemColors.ControlLightLight;
-            checkBox2.Location = new Point(540, 263);
+            checkBox2.Location = new Point(516, 300);
             checkBox2.Margin = new Padding(3, 4, 3, 4);
             checkBox2.Name = "checkBox2";
             checkBox2.Size = new Size(62, 24);
@@ -109,7 +109,7 @@
             textBox4.BackColor = Color.Ivory;
             textBox4.BorderStyle = BorderStyle.FixedSingle;
             textBox4.ForeColor = Color.Black;
-            textBox4.Location = new Point(199, 391);
+            textBox4.Location = new Point(175, 428);
             textBox4.Margin = new Padding(3, 4, 3, 4);
             textBox4.Name = "textBox4";
             textBox4.Size = new Size(234, 27);
@@ -120,7 +120,7 @@
             label6.Anchor = AnchorStyles.None;
             label6.AutoSize = true;
             label6.ForeColor = SystemColors.ControlLightLight;
-            label6.Location = new Point(199, 355);
+            label6.Location = new Point(175, 392);
             label6.Name = "label6";
             label6.Size = new Size(133, 20);
             label6.TabIndex = 15;
@@ -132,7 +132,7 @@
             textBox1.BackColor = Color.Ivory;
             textBox1.BorderStyle = BorderStyle.FixedSingle;
             textBox1.ForeColor = Color.Black;
-            textBox1.Location = new Point(199, 513);
+            textBox1.Location = new Point(175, 550);
             textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(234, 27);
@@ -143,7 +143,7 @@
             label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.ForeColor = SystemColors.ControlLightLight;
-            label3.Location = new Point(519, 458);
+            label3.Location = new Point(495, 495);
             label3.Name = "label3";
             label3.Size = new Size(183, 20);
             label3.TabIndex = 17;
@@ -155,7 +155,7 @@
             textBox2.BackColor = Color.Ivory;
             textBox2.BorderStyle = BorderStyle.FixedSingle;
             textBox2.ForeColor = Color.Black;
-            textBox2.Location = new Point(519, 513);
+            textBox2.Location = new Point(495, 550);
             textBox2.Margin = new Padding(3, 4, 3, 4);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(234, 27);
@@ -166,7 +166,7 @@
             label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.ForeColor = SystemColors.ControlLightLight;
-            label4.Location = new Point(199, 489);
+            label4.Location = new Point(175, 526);
             label4.Name = "label4";
             label4.Size = new Size(157, 20);
             label4.TabIndex = 19;
@@ -178,7 +178,7 @@
             textBox3.BackColor = Color.Ivory;
             textBox3.BorderStyle = BorderStyle.FixedSingle;
             textBox3.ForeColor = Color.Black;
-            textBox3.Location = new Point(519, 391);
+            textBox3.Location = new Point(495, 428);
             textBox3.Margin = new Padding(3, 4, 3, 4);
             textBox3.Name = "textBox3";
             textBox3.Size = new Size(234, 27);
@@ -189,7 +189,7 @@
             label5.Anchor = AnchorStyles.None;
             label5.AutoSize = true;
             label5.ForeColor = SystemColors.ControlLightLight;
-            label5.Location = new Point(519, 355);
+            label5.Location = new Point(495, 392);
             label5.Name = "label5";
             label5.Size = new Size(167, 20);
             label5.TabIndex = 21;
@@ -200,7 +200,7 @@
             label7.Anchor = AnchorStyles.None;
             label7.AutoSize = true;
             label7.ForeColor = SystemColors.ControlLightLight;
-            label7.Location = new Point(519, 489);
+            label7.Location = new Point(495, 526);
             label7.Name = "label7";
             label7.Size = new Size(95, 20);
             label7.TabIndex = 23;
@@ -214,7 +214,7 @@
             button1.FlatStyle = FlatStyle.Flat;
             button1.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = SystemColors.ControlLightLight;
-            button1.Location = new Point(199, 612);
+            button1.Location = new Point(175, 686);
             button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
             button1.Size = new Size(554, 69);
@@ -229,7 +229,7 @@
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.ForeColor = SystemColors.ControlLightLight;
-            label9.Location = new Point(297, 558);
+            label9.Location = new Point(272, 612);
             label9.Name = "label9";
             label9.Size = new Size(233, 32);
             label9.TabIndex = 28;
@@ -241,7 +241,7 @@
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label10.ForeColor = Color.GreenYellow;
-            label10.Location = new Point(515, 558);
+            label10.Location = new Point(490, 612);
             label10.Name = "label10";
             label10.Size = new Size(118, 32);
             label10.TabIndex = 29;
@@ -252,7 +252,7 @@
             pictureBox3.Anchor = AnchorStyles.None;
             pictureBox3.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox3.Image = (Image)resources.GetObject("pictureBox3.Image");
-            pictureBox3.Location = new Point(515, 177);
+            pictureBox3.Location = new Point(491, 214);
             pictureBox3.Margin = new Padding(3, 4, 3, 4);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new Size(82, 59);
@@ -265,7 +265,7 @@
             pictureBox4.Anchor = AnchorStyles.None;
             pictureBox4.BackgroundImageLayout = ImageLayout.Zoom;
             pictureBox4.Image = (Image)resources.GetObject("pictureBox4.Image");
-            pictureBox4.Location = new Point(317, 177);
+            pictureBox4.Location = new Point(293, 214);
             pictureBox4.Margin = new Padding(3, 4, 3, 4);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(134, 59);
@@ -278,7 +278,7 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(82, 110, 72);
-            ClientSize = new Size(964, 694);
+            ClientSize = new Size(916, 768);
             Controls.Add(pictureBox4);
             Controls.Add(pictureBox3);
             Controls.Add(label10);

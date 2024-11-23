@@ -20,9 +20,7 @@ namespace VetenProyect
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Cita cita = new("datos de la cita");
-            //cita.PlanearCita();
-            Close();
+
         }
     }
 }

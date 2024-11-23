@@ -50,3 +50,11 @@ C:\Users\Dlsr2\source\repos\VetenProyect\VetenProyect\obj\Debug\net8.0-windows\V
 C:\Users\Dlsr2\source\repos\VetenProyect\VetenProyect\obj\Debug\net8.0-windows\VetenProyect.InterfazInserccion.Inventarios.AddProductosForm.resources
 C:\Users\Dlsr2\source\repos\VetenProyect\VetenProyect\obj\Debug\net8.0-windows\VetenProyect.InterfazInserccion.Registros.CitasForm.resources
 C:\Users\Dlsr2\source\repos\VetenProyect\VetenProyect\obj\Debug\net8.0-windows\VetenProyect.Form15.resources
+C:\Users\Dlsr2\source\repos\VetenProyect\VetenProyect\obj\Debug\net8.0-windows\VetenProyect.InterfazInserccion.Historiales.DiagnosticoForm.resources
+C:\Users\Dlsr2\source\repos\VetenProyect\VetenProyect\obj\Debug\net8.0-windows\VetenProyect.InterfazInserccion.Historiales.HistorialMedicoForm.resources
+C:\Users\Dlsr2\source\repos\VetenProyect\VetenProyect\obj\Debug\net8.0-windows\VetenProyect.InterfazInserccion.Historiales.PacienteForm.resources
+C:\Users\Dlsr2\source\repos\VetenProyect\VetenProyect\obj\Debug\net8.0-windows\VetenProyect.InterfazInserccion.Historiales.VisitaForm.resources
+C:\Users\Dlsr2\source\repos\VetenProyect\VetenProyect\obj\Debug\net8.0-windows\VetenProyect.InterfazInserccion.Registros.PersonalForm.resources
+C:\Users\Dlsr2\source\repos\VetenProyect\VetenProyect\obj\Debug\net8.0-windows\VetenProyect.InterfazInserccion.Registros.TransaccionesForm.resources
+C:\Users\Dlsr2\source\repos\VetenProyect\VetenProyect\obj\Debug\net8.0-windows\VetenProyect.InterfazInserccion.Registros.UsuarioForm.resources
+C:\Users\Dlsr2\source\repos\VetenProyect\VetenProyect\obj\Debug\net8.0-windows\VetenProyect.sourcelink.json

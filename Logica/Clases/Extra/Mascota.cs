@@ -1,6 +1,6 @@
 ﻿using Datos;
 
-namespace Logica.Clases
+namespace Logica.Clases.Extra
 {
     public class Mascota
     {

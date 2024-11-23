@@ -1,8 +1,8 @@
 ﻿using System.Data.SqlClient;
 using System.Data;
-using System.Diagnostics.CodeAnalysis;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using System.ComponentModel.DataAnnotations.Schema;
+using System.Security.Cryptography;
+using Microsoft.Win32.SafeHandles;
+
 
 namespace Datos
 {
@@ -430,6 +430,8 @@ namespace Datos
             }
         }
 
+        //OVERLOAD
+
         public DataTable SearchRegistro(string tabla, string orColumn, string orValue, string orColumnId, int orId)
         {
             using (SqlConnection conn = new SqlConnection("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
@@ -461,6 +463,27 @@ namespace Datos
                     return dataTable;
                 }
 
+            }
+        }
+
+        public List<string> GetPersonal(string Cargo)
+        {
+            List<string> data = new();
+            using (SqlConnection conn = new SqlConnection("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new($"SELECT Nombre FROM Personal WHERE Cargo = '{Cargo}';", conn))
+                {
+                    using(SqlDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            data.Add(reader["Nombre"].ToString());
+                        }
+
+                        return data;
+                    }
+                }
             }
         }
     }

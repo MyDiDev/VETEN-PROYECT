@@ -27,11 +27,21 @@ namespace Logica.Clases.Registros
             Certificaciones = certificaciones;
         }
 
+        public Personal()
+        {
+
+        }
+
         Connection connection = new();
 
         public bool agregarPersonal()
         {
             return connection.AgregarPersonal(Nombre, Cargo, Telefono, Email, Horario_Trabajo, Certificaciones);
+        }
+
+        public List<string> getPersonal(string Cargo)
+        {
+            return connection.GetPersonal(Cargo);
         }
     }
 }

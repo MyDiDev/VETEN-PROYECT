@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Logica;
-using Logica.Clases.Inventarios;
+﻿using Logica.Clases.Inventarios;
 
 namespace VetenProyect.InterfazInserccion
 {
@@ -42,8 +32,7 @@ namespace VetenProyect.InterfazInserccion
             {
                 MessageBox.Show("Llene el formulario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
-            }
-            
+            } 
 
             try
             {

@@ -18,7 +18,7 @@ namespace VetenProyect
                 return;
             }
 
-            Usuario usuario = new Usuario(nameBox.Text, addressBox.Text, phoneBox.Text, emailBox.Text, passBox.Text);
+            Usuarios usuario = new Usuarios(nameBox.Text, addressBox.Text, phoneBox.Text, emailBox.Text, passBox.Text);
             usuario.agregarUsuario("ADMIN");
 
         }

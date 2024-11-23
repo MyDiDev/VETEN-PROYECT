@@ -1,7 +1,7 @@
 ﻿using Datos;
 using System.Data;
 
-namespace Logica.Clases
+namespace Logica.Clases.Extra
 {
     public class CitasRecordatorios
     {
