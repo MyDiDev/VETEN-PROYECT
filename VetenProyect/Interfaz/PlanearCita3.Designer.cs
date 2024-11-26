@@ -31,8 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlanearCita3));
             label1 = new Label();
             label2 = new Label();
-            checkBox1 = new CheckBox();
-            checkBox2 = new CheckBox();
+            masterCheck = new CheckBox();
+            visaCheck = new CheckBox();
             cardName = new TextBox();
             label6 = new Label();
             cardNum = new TextBox();
@@ -75,33 +75,33 @@
             label2.TabIndex = 6;
             label2.Text = "ELIGE EL TIPO DE TARJETA:";
             // 
-            // checkBox1
+            // masterCheck
             // 
-            checkBox1.Anchor = AnchorStyles.None;
-            checkBox1.AutoSize = true;
-            checkBox1.Cursor = Cursors.Hand;
-            checkBox1.ForeColor = SystemColors.ControlLightLight;
-            checkBox1.Location = new Point(293, 300);
-            checkBox1.Margin = new Padding(3, 4, 3, 4);
-            checkBox1.Name = "checkBox1";
-            checkBox1.Size = new Size(126, 24);
-            checkBox1.TabIndex = 9;
-            checkBox1.Text = "MASTERCARD";
-            checkBox1.UseVisualStyleBackColor = true;
+            masterCheck.Anchor = AnchorStyles.None;
+            masterCheck.AutoSize = true;
+            masterCheck.Cursor = Cursors.Hand;
+            masterCheck.ForeColor = SystemColors.ControlLightLight;
+            masterCheck.Location = new Point(293, 300);
+            masterCheck.Margin = new Padding(3, 4, 3, 4);
+            masterCheck.Name = "masterCheck";
+            masterCheck.Size = new Size(126, 24);
+            masterCheck.TabIndex = 9;
+            masterCheck.Text = "MASTERCARD";
+            masterCheck.UseVisualStyleBackColor = true;
             // 
-            // checkBox2
+            // visaCheck
             // 
-            checkBox2.Anchor = AnchorStyles.None;
-            checkBox2.AutoSize = true;
-            checkBox2.Cursor = Cursors.Hand;
-            checkBox2.ForeColor = SystemColors.ControlLightLight;
-            checkBox2.Location = new Point(516, 300);
-            checkBox2.Margin = new Padding(3, 4, 3, 4);
-            checkBox2.Name = "checkBox2";
-            checkBox2.Size = new Size(62, 24);
-            checkBox2.TabIndex = 10;
-            checkBox2.Text = "VISA";
-            checkBox2.UseVisualStyleBackColor = true;
+            visaCheck.Anchor = AnchorStyles.None;
+            visaCheck.AutoSize = true;
+            visaCheck.Cursor = Cursors.Hand;
+            visaCheck.ForeColor = SystemColors.ControlLightLight;
+            visaCheck.Location = new Point(516, 300);
+            visaCheck.Margin = new Padding(3, 4, 3, 4);
+            visaCheck.Name = "visaCheck";
+            visaCheck.Size = new Size(62, 24);
+            visaCheck.TabIndex = 10;
+            visaCheck.Text = "VISA";
+            visaCheck.UseVisualStyleBackColor = true;
             // 
             // cardName
             // 
@@ -293,8 +293,8 @@
             Controls.Add(label3);
             Controls.Add(cardName);
             Controls.Add(label6);
-            Controls.Add(checkBox2);
-            Controls.Add(checkBox1);
+            Controls.Add(visaCheck);
+            Controls.Add(masterCheck);
             Controls.Add(label2);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedDialog;
@@ -302,6 +302,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "PlanearCita3";
             Text = "VETEN-PLANEAR CITA PAGO";
+            Load += PlanearCita3_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ResumeLayout(false);
@@ -312,8 +313,8 @@
 
         private Label label1;
         private Label label2;
-        private CheckBox checkBox1;
-        private CheckBox checkBox2;
+        private CheckBox masterCheck;
+        private CheckBox visaCheck;
         private TextBox cardName;
         private Label label6;
         private TextBox cardNum;

@@ -19,16 +19,25 @@ namespace VetenProyect
         public string reasonDescription;
         public DateTime appointmentDate;
         public string doctor;
+        public decimal Price;
 
         private void button1_Click(object sender, EventArgs e)
         {
-            decimal price = Convert.ToDecimal(priceLabel.Text);
-            if(string.IsNullOrEmpty(cardName.Text) || string.IsNullOrEmpty(dateExpired.Text) ||
-                string.IsNullOrEmpty(cardNum.Text) || string.IsNullOrEmpty(cvv.Text))
+            if (string.IsNullOrEmpty(cardName.Text) || string.IsNullOrEmpty(dateExpired.Text) ||
+                string.IsNullOrEmpty(cardNum.Text) || string.IsNullOrEmpty(cvv.Text) || !masterCheck.Checked && !visaCheck.Checked)
             {
                 MessageBox.Show("LLene el formulario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+
+            if (masterCheck.Checked && visaCheck.Checked)
+            {
+                MessageBox.Show("Seleccione solo un tipo de tarjeta", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+
+            string cardType = masterCheck.Checked ? "Mastercard" : "Visa";
             string CardNum = cardNum.Text.Trim();
 
             if (CardNum.Length != 16)
@@ -49,9 +58,26 @@ namespace VetenProyect
                 return;
             }
 
-            CitasRecordatorios citasRecordatorios = new(appointmentDate, TipoCita, 1, 1, reasonDescription, petDescription, petState);
-            Transacciones transaccion = new(1, DateTime.Now, $"Cita para: {TipoCita}", "mastercard", price, $"Cita planeada para: {TipoCita}", "PAGADO");
-            
+            CitasRecordatorios citasRecordatorios = new(appointmentDate, TipoCita, reasonDescription, petDescription, petState);
+            Transacciones transaccion = new(clientName, DateTime.Now, $"Cita de: {TipoCita}", cardType, Price, $"Cita planeada sobre: {TipoCita}", "PAGADO");
+
+
+            if (citasRecordatorios.agregregarCitaRecordatorio(clientName, petName) == "1" && transaccion.agregarTransaccion() == "1")
+            {
+                MessageBox.Show("Cita Planeada exitosamente!", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Close();
+                return;
+            }
+            else
+            {
+                MessageBox.Show("No se pudo planear la Cita, Intente nuevamente", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+        }
+
+        private void PlanearCita3_Load(object sender, EventArgs e)
+        {
+            priceLabel.Text = Convert.ToString(Price) + "$RDS";
         }
     }
 }

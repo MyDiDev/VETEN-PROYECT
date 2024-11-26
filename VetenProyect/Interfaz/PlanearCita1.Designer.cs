@@ -33,18 +33,18 @@
             label2 = new Label();
             button1 = new Button();
             panel1 = new Panel();
+            comboBox1 = new ComboBox();
+            label8 = new Label();
             petDescription = new TextBox();
             label7 = new Label();
             petStateDescription = new TextBox();
             label5 = new Label();
+            reason = new ComboBox();
             label4 = new Label();
             petName = new TextBox();
             label3 = new Label();
             clientName = new TextBox();
             label6 = new Label();
-            label8 = new Label();
-            reason = new ComboBox();
-            comboBox1 = new ComboBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -112,6 +112,28 @@
             panel1.Size = new Size(916, 756);
             panel1.TabIndex = 29;
             // 
+            // comboBox1
+            // 
+            comboBox1.Anchor = AnchorStyles.None;
+            comboBox1.BackColor = Color.Ivory;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Saludable", "Enfermo", "En Recuperación", "Bajo Tratamiento", "En Emergencia", "Convaleciente" });
+            comboBox1.Location = new Point(487, 349);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(281, 28);
+            comboBox1.TabIndex = 38;
+            // 
+            // label8
+            // 
+            label8.Anchor = AnchorStyles.None;
+            label8.AutoSize = true;
+            label8.ForeColor = SystemColors.ControlLightLight;
+            label8.Location = new Point(487, 308);
+            label8.Name = "label8";
+            label8.Size = new Size(182, 20);
+            label8.TabIndex = 37;
+            label8.Text = "ESTADO DE LA MASCOTA:";
+            // 
             // petDescription
             // 
             petDescription.Anchor = AnchorStyles.None;
@@ -159,6 +181,17 @@
             label5.Size = new Size(158, 20);
             label5.TabIndex = 33;
             label5.Text = "DESCRIBA EL MOTIVO:";
+            // 
+            // reason
+            // 
+            reason.Anchor = AnchorStyles.None;
+            reason.BackColor = Color.Ivory;
+            reason.FormattingEnabled = true;
+            reason.Items.AddRange(new object[] { "Consulta General (Chequeo de salud)", "Vacunación", "Desparacitación", "Emergencias", "Consulta de Dermatología (Problemas de piel)", "Consulta Odontológica", "Chequeo para Esterilización/Castración", "Exámenes de Laboratorio (Análisis de sangre, orina, etc.)", "Consulta de Comportamiento", "Atención Geriátrica", "Cirugía", "Atención de Urgencias Quirúrgicas", "Seguimiento Postoperatorio", "Consulta de Nutrición", "Pruebas de Diagnóstico por Imágenes (Radiografías, Ecografías)" });
+            reason.Location = new Point(132, 349);
+            reason.Name = "reason";
+            reason.Size = new Size(281, 28);
+            reason.TabIndex = 32;
             // 
             // label4
             // 
@@ -216,37 +249,6 @@
             label6.Size = new Size(229, 20);
             label6.TabIndex = 27;
             label6.Text = "NOMBRE/NOMBRE DE USUARIO:";
-            // 
-            // label8
-            // 
-            label8.Anchor = AnchorStyles.None;
-            label8.AutoSize = true;
-            label8.ForeColor = SystemColors.ControlLightLight;
-            label8.Location = new Point(487, 308);
-            label8.Name = "label8";
-            label8.Size = new Size(182, 20);
-            label8.TabIndex = 37;
-            label8.Text = "ESTADO DE LA MASCOTA:";
-            // 
-            // reason
-            // 
-            reason.BackColor = Color.Ivory;
-            reason.FormattingEnabled = true;
-            reason.Items.AddRange(new object[] { "Consulta General (Chequeo de salud)", "Vacunación", "Desparacitación", "Emergencias", "Consulta de Dermatología (Problemas de piel)", "Consulta Odontológica", "Chequeo para Esterilización/Castración", "Exámenes de Laboratorio (Análisis de sangre, orina, etc.)", "Consulta de Comportamiento", "Atención Geriátrica", "Cirugía", "Atención de Urgencias Quirúrgicas", "Seguimiento Postoperatorio", "Consulta de Nutrición", "Pruebas de Diagnóstico por Imágenes (Radiografías, Ecografías)" });
-            reason.Location = new Point(132, 349);
-            reason.Name = "reason";
-            reason.Size = new Size(281, 28);
-            reason.TabIndex = 32;
-            // 
-            // comboBox1
-            // 
-            comboBox1.BackColor = Color.Ivory;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Saludable", "Enfermo", "En Recuperación", "Bajo Tratamiento", "En Emergencia", "Convaleciente" });
-            comboBox1.Location = new Point(487, 349);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(281, 28);
-            comboBox1.TabIndex = 38;
             // 
             // PlanearCita1
             // 

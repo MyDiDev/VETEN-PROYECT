@@ -7,20 +7,16 @@ namespace Logica.Clases.Extra
     {
         private DateTime FechaHora;
         private string Tipo;
-        private int IDCliente;
-        private int IDMascota;
         private string Motivo;
         private string Descripcion;
         private string Estado;
 
 
-        public CitasRecordatorios(DateTime fechaHora, string tipo, int idCliente, int idMascota,
+        public CitasRecordatorios(DateTime fechaHora, string tipo,
                                   string motivo, string descripcion, string estado)
         {
             FechaHora = fechaHora;
             Tipo = tipo;
-            IDCliente = idCliente;
-            IDMascota = idMascota;
             Motivo = motivo;
             Descripcion = descripcion;
             Estado = estado;
@@ -28,9 +24,9 @@ namespace Logica.Clases.Extra
 
         Connection connection = new();
 
-        public bool agregregarCitaRecordatorio()
+        public string agregregarCitaRecordatorio(string nombreCliente, string nombreMascota)
         {
-            return connection.AgregarCitaRecordatorio(FechaHora, Tipo, IDCliente, IDMascota, Motivo, Descripcion, Estado);
+            return connection.AgregarCitaRecordatorio(FechaHora, Tipo, nombreCliente, nombreMascota, Motivo, Descripcion, Estado);
         }
 
         public DataTable getCitasRecordatorios(int IDCliente, int IDMascota)

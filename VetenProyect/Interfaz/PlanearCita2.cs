@@ -15,6 +15,7 @@ namespace VetenProyect
         public string petState;
         public string petDescription;
         public string reasonDescription;
+        public decimal price;
 
         private Form activeForm = null;
 
@@ -62,6 +63,7 @@ namespace VetenProyect
 
             PlanearCita3 f5 = new PlanearCita3();
             panel1.BringToFront();
+            f5.Price = price;
             f5.TipoCita = TipoCita;
             f5.clientName = clientName;
             f5.petName = petName;
@@ -71,6 +73,7 @@ namespace VetenProyect
             f5.appointmentDate = selectedDate;
             f5.doctor = doctors.Text;
             OpenForm(f5);
+            Close();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

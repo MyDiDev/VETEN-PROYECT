@@ -12,7 +12,7 @@ namespace Logica.Clases.Registros
 {
     public class Transacciones
     {
-        public int IdCliente;
+        public string ClientName;
         public DateTime FechaTransaccion;
         public string Tipo;
         public string MetodoPago;
@@ -20,9 +20,9 @@ namespace Logica.Clases.Registros
         public string Descripcion;
         public string Estado;
 
-        public Transacciones(int idCliente, DateTime fechaTransaccion, string tipo, string metodoPago, decimal monto, string descripcion, string estado)
+        public Transacciones(string clientName, DateTime fechaTransaccion, string tipo, string metodoPago, decimal monto, string descripcion, string estado)
         {
-            IdCliente = idCliente;
+            ClientName = clientName;
             FechaTransaccion = fechaTransaccion;
             Tipo = tipo;
             MetodoPago = metodoPago;
@@ -33,9 +33,9 @@ namespace Logica.Clases.Registros
 
         Connection connection = new();
 
-        public bool agregarTransaccion()
+        public string agregarTransaccion()
         {
-            return connection.AgregarTransaccion(IdCliente, FechaTransaccion, Tipo, MetodoPago, Monto, Descripcion, Estado);
+            return connection.AgregarTransaccion(ClientName, FechaTransaccion, Tipo, MetodoPago, Monto, Descripcion, Estado);
         }
     }
 }
