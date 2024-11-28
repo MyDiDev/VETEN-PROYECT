@@ -14,13 +14,14 @@ namespace Datos
 
         //VARIABLE PARA CAPITALIZAR UNA CADENA
         TextInfo textInfo = CultureInfo.CurrentCulture.TextInfo;
+        public SqlConnection conn = new SqlConnection("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;");
 
 
         // INVENTARIOS, HISTORIALES Y REGISTROS
 
         public DataTable GetTable(string tableName)
         {
-            using (SqlConnection conn = new SqlConnection("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+            using (conn)
             {
                 conn.Open();
 
@@ -45,7 +46,7 @@ namespace Datos
                int cantidad,
                decimal precioUnitario)
         {
-            using (SqlConnection conn = new("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+            using (conn)
             {
                 conn.Open();
 
@@ -64,7 +65,7 @@ namespace Datos
             DateTime fechaMantenimiento,
             decimal precioUnitario)
         {
-            using (SqlConnection conn = new("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+            using (conn)
             {
                 conn.Open();
                 SqlCommand cmd = new($"INSERT INTO Material_Medico_Equipamiento (Nombre, Descripcion, Cantidad, Fecha_Mantenimiento, Precio_Unitario) VALUES('{textInfo.ToTitleCase(nombre.ToLower())}', '{descripcion}', {cantidad}, '{fechaMantenimiento}', {precioUnitario});", conn);
@@ -76,14 +77,41 @@ namespace Datos
 
         //HISTORIAL MEDICO
 
-        public bool AgregarHistorialMedico(int idPaciente, DateTime fecha, string notasGenerales)
+        public string AgregarHistorialMedico(string nombrePaciente, DateTime fecha, string notasGenerales)
         {
-            using (SqlConnection conn = new("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+            try
             {
-                conn.Open();
-                SqlCommand cmd = new($"INSERT INTO HistorialMedico (ID_Paciente, Fecha, Notas_Generales) VALUES ({idPaciente}, '{fecha}', '{notasGenerales}');", conn);
-                cmd.ExecuteNonQuery();
-                return true;
+                int idPaciente = -1;
+                using (conn)
+                {
+                    conn.Open();
+
+                    using (SqlCommand cmd = new SqlCommand($"SELECT ID_Paciente FROM Pacientes WHERE Nombre='{textInfo.ToTitleCase(nombrePaciente.ToLower())}'", conn))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                idPaciente = reader.GetInt32(0);
+                            }
+                            else
+                            {
+                                conn.Close();
+                                return "No se pudo encontrar el identificador del paciente, intente agregando otra vez";
+                            }
+                        }
+                    }
+
+                    using (SqlCommand cmd = new SqlCommand($"INSERT INTO HistorialMedico (ID_Paciente, Fecha, Notas_Generales) VALUES ({idPaciente}, '{fecha}', '{notasGenerales}');", conn))
+                    {
+                        cmd.ExecuteNonQuery();
+                        return "1";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return $"{ex}";
             }
         }
 
@@ -95,7 +123,7 @@ namespace Datos
             {
                 int idProveedor = -1;
 
-                using (SqlConnection conn = new("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+                using (conn)
                 {
                     conn.Open();
 
@@ -106,6 +134,11 @@ namespace Datos
                             if (reader.Read())
                             {
                                 idProveedor = reader.GetInt32(0);
+                            }
+                            else
+                            {
+                                conn.Close();
+                                return "No se pudo localizar el identificador del proveedor, intente agregando nuevamente";
                             }
                         }
                     }
@@ -120,7 +153,7 @@ namespace Datos
             }
             catch (Exception ex)
             {
-                return $"Error Ocurrido: {ex}";
+                return $"{ex}";
             }
         }
 
@@ -134,7 +167,7 @@ namespace Datos
         {
             try
             {
-                using (SqlConnection conn = new("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+                using (conn)
                 {
                     conn.Open();
                     SqlCommand cmd = new($"INSERT INTO Alimentos_Suplementos (Nombre, Descripcion, Cantidad, Precio_Unitario) VALUES ('{textInfo.ToTitleCase(nombre.ToLower())}', '{descripcion}', {cantidad}, {precioUnitario});", conn);
@@ -159,7 +192,7 @@ namespace Datos
         {
             try
             {
-                using (SqlConnection conn = new("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+                using (conn)
                 {
                     conn.Open();
                     SqlCommand cmd = new($"INSERT INTO Proveedores (Nombre_Proveedor, Contacto, Telefono, Email, Direccion, Condiciones_Entrega) VALUES ('{textInfo.ToTitleCase(nombreProveedor.ToLower())}', '{contacto}', '{telefono}', '{email}', '{direccion}', '{condicionesEntrega}');", conn);
@@ -174,26 +207,47 @@ namespace Datos
 
         //PRODUCTOS
 
-        public bool AgregarProducto(string nombre,
+        public string AgregarProducto(string nombre,
             string descripcion,
-            int idProveedor,
+            string nombreProveedor,
             double precioUnitario,
             int cantidad)
         {
             try
             {
-                using (SqlConnection conn = new("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+                int idProveedor = -1;
+
+                using (conn)
                 {
                     conn.Open();
-                    SqlCommand cmd = new($"INSERT INTO Productos_Generales (Nombre, Descripcion, ID_Proveedor, Precio_Unitario, Cantidad) VALUES ('{textInfo.ToTitleCase(nombre.ToLower())}', '{descripcion}', {idProveedor}, {precioUnitario}, {cantidad});", conn);
-                    cmd.ExecuteNonQuery();
-                    return true;
+                    using (SqlCommand cmd = new SqlCommand($"SELECT ID_Proveedor FROM Proveedores WHERE Nombre_Proveedor='{textInfo.ToTitleCase(nombreProveedor.ToLower())}'",conn))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                idProveedor = reader.GetInt32(0);
+                            }
+                            else
+                            {
+                                conn.Close();
+                                return "No se pudo Econtrar el identificador del Proveedor, intente agregar el proveedor nuevamente";
+                            }
+                        }
+                    }
+
+                    using(SqlCommand cmd = new($"INSERT INTO Productos_Generales (Nombre, Descripcion, ID_Proveedor, Precio_Unitario, Cantidad) VALUES ('{textInfo.ToTitleCase(nombre.ToLower())}', '{descripcion}', {idProveedor}, {precioUnitario}, {cantidad});", conn))
+                    {
+                        cmd.ExecuteNonQuery();
+                        return "1";
+                    }
+
                 }
             }
-            catch (SqlException)
+            catch (Exception ex)
             {
-                return false;
-            }       
+                return $"{ex}";
+            }
         }
 
         //PACIENTES
@@ -204,7 +258,7 @@ namespace Datos
             {
                 int idCliente = -1;
 
-                using (SqlConnection conn = new("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+                using (conn)
                 {
 
                     conn.Open();
@@ -234,9 +288,10 @@ namespace Datos
                 }
 
 
-            }catch(Exception ex)
+            }
+            catch (Exception ex)
             {
-                return $"Error Ocurrido: {ex}";
+                return $"{ex}";
             }
         }
 
@@ -250,7 +305,7 @@ namespace Datos
                 int idMascota = -1;
                 int idPersonal = -1;
 
-                using (SqlConnection conn = new SqlConnection("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+                using (conn)
                 {
                     conn.Open();
 
@@ -265,7 +320,7 @@ namespace Datos
                             else
                             {
                                 conn.Close();
-                                return "No se pudo Econtrar el identificador del Cliente, intente agregar su nombre otra vez";
+                                return "No se pudo Econtrar el identificador del Cliente, intente agregar el cliente nuevamente";
                             }
                         }
                     }
@@ -281,21 +336,22 @@ namespace Datos
                             else
                             {
                                 conn.Close();
-                                return "No se pudo encontrar el Identificador de la Mascota, Trate de agregar nuevamente el nombre de la mascota";
+                                return "No se pudo encontrar el Identificador de la Mascota, agregue nuevamente el nombre de la mascota";
                             }
                         }
                     }
 
-
-                    using (SqlCommand cmd = new SqlCommand($"INSERT INTO Citas (ID_Cliente, ID_Mascota, ID_Personal, Fecha, Tipo_Servicio, Estado, Observaciones) VALUES({idCliente}, {idMascota}, {idPersonal}, '{Fecha}', '{TipoServicio}', '{Estado}', '{Observaciones}');", conn))
+                    // TOMAR EN CUENTA: TipoServicio
+                    using (SqlCommand cmd = new SqlCommand($"INSERT INTO Citas (ID_Cliente, ID_Mascota, ID_Personal, Fecha, Tipo_Servicio, Estado, Observaciones) VALUES({idCliente}, {idMascota}, {idPersonal}, '{Fecha}', '{textInfo.ToTitleCase(TipoServicio.ToLower())}', '{Estado}', '{Observaciones}');", conn))
                     {
                         cmd.ExecuteNonQuery();
                         return "1";
                     }
                 }
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
-                return $"Error Ocurrido: {ex}";
+                return $"{ex}";
             }
         }
 
@@ -309,7 +365,7 @@ namespace Datos
                 int idCliente = -1;
                 int idMascota = -1;
 
-                using (SqlConnection conn = new SqlConnection("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+                using (conn)
                 {
                     conn.Open();
 
@@ -361,9 +417,10 @@ namespace Datos
                         return "1";
                     }
                 }
-            }catch (Exception ex)
+            }
+            catch (Exception ex)
             {
-                return $"Error Ocurrido: {ex}";
+                return $"{ex}";
             }
         }
 
@@ -373,7 +430,7 @@ namespace Datos
             
             try
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+                using (conn)
                 {
                     conn.Open();
 
@@ -398,7 +455,7 @@ namespace Datos
         {
             try
             {
-                using (SqlConnection conn = new("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+                using (conn)
                 {
                     conn.Open();
                     SqlCommand cmd = new($"INSERT INTO Diagnosticos (ID_Visita, Descripcion, Fecha_Diagnostico) VALUES({idVisita}, '{descripcion}', '{fechaDiagnostico}');", conn);
@@ -419,7 +476,7 @@ namespace Datos
             try
             {
                 int idCliente = -1;
-                using (SqlConnection conn = new("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+                using (conn)
                 {
 
                     conn.Open();
@@ -436,7 +493,7 @@ namespace Datos
                             else
                             {
                                 conn.Close();
-                                return "No se pudo Econtrar el identificador del Cliente, intente agregar su nombre otra vez";
+                                return "No se pudo Econtrar el identificador del Cliente, intente agregar el cliente nuevamente";
                             }
                         }
                     }
@@ -449,9 +506,9 @@ namespace Datos
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return "";
+                return $"{ex}";
             }
         }
 
@@ -461,7 +518,7 @@ namespace Datos
         {
             try
             {
-                using (SqlConnection conn = new("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+                using (conn)
                 {
                     conn.Open();
                     SqlCommand cmd = new($"INSERT INTO Visitas (Fecha_Visita, Motivo, Peso, Temperatura, Notas) VALUES('{fechaVisita}', '{motivo}', {peso}, {temperatura}, '{notas}');", conn);
@@ -481,12 +538,12 @@ namespace Datos
         {
             try
             {
-                using (SqlConnection conn = new("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+                using (conn)
                 {
                     conn.Open();
                     SqlCommand cmd = new($"INSERT INTO Personal (Nombre, Cargo, Telefono, Email, Horario_Trabajo, Certificaciones) VALUES(@Nombre, @Cargo, @Telefono, @Email, @Horario_Trabajo, @Certificaciones);", conn);
                     cmd.Parameters.AddWithValue("@Nombre", textInfo.ToTitleCase(nombre.ToLower()));
-                    cmd.Parameters.AddWithValue("@Cargo", cargo);
+                    cmd.Parameters.AddWithValue("@Cargo", textInfo.ToTitleCase(cargo.ToLower()));
                     cmd.Parameters.AddWithValue("@Telefono", telefono);
                     cmd.Parameters.AddWithValue("@Email", email);
                     cmd.Parameters.AddWithValue("@Horario_Trabajo", horario_Trabajo);
@@ -535,17 +592,28 @@ namespace Datos
                 {
                     conn.Open();
 
-                    using (SqlCommand cmd = new SqlCommand($"SELECT Tipo_Usuario FROM Clientes WHERE Nombre='{userName}' AND Clave='{userPassword}';", conn))
+                    using (SqlCommand cmd = new SqlCommand($"SELECT Tipo_Usuario FROM Clientes WHERE Nombre='{textInfo.ToTitleCase(userName.ToLower())}' AND Clave='{userPassword}';", conn))
                     {
                         object result = cmd.ExecuteScalar();
-                        string Resultado = result.ToString();
-                        return Resultado;
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                string userType = reader.GetString(0);
+                                return userType;
+                            }
+                            else
+                            {
+                                return "No se pudo encontrar el tipo de usuario, intente nuevamente";
+                            }
+                        }
+
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return "0";
+                return $"{ex}";
             }
         }
 
@@ -560,7 +628,7 @@ namespace Datos
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+                using (conn)
                 {
                     conn.Open();
 
@@ -587,12 +655,12 @@ namespace Datos
             {
                 int idCliente = -1;
 
-                using (SqlConnection conn = new SqlConnection("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+                using (conn)
                 {
 
                     conn.Open();
 
-                    using (SqlCommand cmd = new SqlCommand($"SELECT ID_Cliente FROM Clientes WHERE Nombre='{nombreCliente}';", conn))
+                    using (SqlCommand cmd = new SqlCommand($"SELECT ID_Cliente FROM Clientes WHERE Nombre='{textInfo.ToTitleCase(nombreCliente.ToLower())}';", conn))
                     {
                         using (SqlDataReader reader = cmd.ExecuteReader())
                         {
@@ -602,7 +670,8 @@ namespace Datos
                             }
                             else
                             {
-                                return "";
+                                conn.Close();
+                                return "No se pudo encontrar el Identificador del cliente, Intente ingresar el nombre del cliente nuevamente";
                             }
                         }
                     }
@@ -615,9 +684,9 @@ namespace Datos
 
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return "0";
+                return $"{ex}";
             }
         }
 
@@ -625,7 +694,7 @@ namespace Datos
 
         public int ConseguirId(string Tabla, string ColumnaTarget, string ColumnaWhere, string ValorWhere)
         {
-            using (SqlConnection conn = new SqlConnection("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+            using (conn)
             {
                 int id = -1;
 
@@ -659,7 +728,7 @@ namespace Datos
         {
             try
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+                using (conn)
                 {
                     conn.Open();
                     SqlCommand cmd = new($"DELETE FROM {tabla} WHERE {columnId} = {id};", conn);
@@ -679,7 +748,7 @@ namespace Datos
             DataTable dataTable = new DataTable();
             try
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+                using (conn)
                 {
                     conn.Open();
                     using (SqlCommand cmd = new($"SELECT * FROM {tabla} WHERE {orColumn} = '{orValue}' OR {orColumnId} = {orId};", conn))
@@ -705,7 +774,7 @@ namespace Datos
 
             try
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+                using (conn)
                 {
                     conn.Open();
                     using (SqlCommand cmd = new($"SELECT * FROM {tabla} WHERE {orColumnId} = {orId};", conn))
@@ -729,7 +798,7 @@ namespace Datos
             List<string> data = new List<string>();
             try
             {
-                using (SqlConnection conn = new SqlConnection("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+                using (conn)
                 {
                     conn.Open();
                     using (SqlCommand cmd = new($"SELECT Nombre FROM Personal WHERE Cargo = '{Cargo}';", conn))
@@ -749,6 +818,54 @@ namespace Datos
             catch (Exception)
             {
                 return data;
+            }
+        }
+
+        public string CheckCitaDate(DateTime date, int id)
+        {
+            try
+            {
+                DateTime appointmentDate;
+                string motivo;
+                using (conn)
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand($"SELECT * FROM Citas_Recordatorios WHERE ID={id};", conn))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                appointmentDate = reader.GetDateTime(1);
+                                motivo = reader.GetString(5);
+                            }
+                            else
+                            {
+                                conn.Close();
+                                return "No se pudo encontrar el identificador de la cita, intente nuevamente";
+                            }
+                        }
+                    }
+
+                    if (date > appointmentDate)
+                    {
+                        using (SqlCommand cmd = new SqlCommand($"DELETE FROM Citas_Recordatorios WHERE ID={id};",conn))
+                        {
+                            cmd.ExecuteNonQuery();
+                            return "";
+                        }
+                    }
+                    else if (date == appointmentDate)
+                    {
+                        return $"!La Cita sobre: {motivo}, Es para Hoy a las {appointmentDate.ToString().Substring(10)}";
+                    }
+                }
+
+                return "No se pudo realizar la operacion";
+            }
+            catch (Exception ex)
+            {
+                return $"{ex}";
             }
         }
     }

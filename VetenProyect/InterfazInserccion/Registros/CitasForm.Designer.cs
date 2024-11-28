@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            idClient = new TextBox();
+            clientName = new TextBox();
             label1 = new Label();
-            idPet = new TextBox();
+            petName = new TextBox();
             label2 = new Label();
-            IdPersonal = new TextBox();
+            personalName = new TextBox();
             label3 = new Label();
             label4 = new Label();
             DatePlanned = new DateTimePicker();
@@ -45,13 +45,13 @@
             button1 = new Button();
             SuspendLayout();
             // 
-            // idClient
+            // clientName
             // 
-            idClient.Anchor = AnchorStyles.None;
-            idClient.Location = new Point(29, 95);
-            idClient.Name = "idClient";
-            idClient.Size = new Size(298, 27);
-            idClient.TabIndex = 5;
+            clientName.Anchor = AnchorStyles.None;
+            clientName.Location = new Point(29, 95);
+            clientName.Name = "clientName";
+            clientName.Size = new Size(298, 27);
+            clientName.TabIndex = 5;
             // 
             // label1
             // 
@@ -59,17 +59,17 @@
             label1.AutoSize = true;
             label1.Location = new Point(29, 57);
             label1.Name = "label1";
-            label1.Size = new Size(102, 20);
+            label1.Size = new Size(142, 20);
             label1.TabIndex = 4;
-            label1.Text = "ID del Cliente:";
+            label1.Text = "Nombre del Cliente:";
             // 
-            // idPet
+            // petName
             // 
-            idPet.Anchor = AnchorStyles.None;
-            idPet.Location = new Point(405, 95);
-            idPet.Name = "idPet";
-            idPet.Size = new Size(298, 27);
-            idPet.TabIndex = 7;
+            petName.Anchor = AnchorStyles.None;
+            petName.Location = new Point(405, 95);
+            petName.Name = "petName";
+            petName.Size = new Size(298, 27);
+            petName.TabIndex = 7;
             // 
             // label2
             // 
@@ -77,17 +77,17 @@
             label2.AutoSize = true;
             label2.Location = new Point(405, 57);
             label2.Name = "label2";
-            label2.Size = new Size(124, 20);
+            label2.Size = new Size(164, 20);
             label2.TabIndex = 6;
-            label2.Text = "ID de la Mascota:";
+            label2.Text = "Nombre de la Mascota:";
             // 
-            // IdPersonal
+            // personalName
             // 
-            IdPersonal.Anchor = AnchorStyles.None;
-            IdPersonal.Location = new Point(29, 219);
-            IdPersonal.Name = "IdPersonal";
-            IdPersonal.Size = new Size(298, 27);
-            IdPersonal.TabIndex = 9;
+            personalName.Anchor = AnchorStyles.None;
+            personalName.Location = new Point(29, 219);
+            personalName.Name = "personalName";
+            personalName.Size = new Size(298, 27);
+            personalName.TabIndex = 9;
             // 
             // label3
             // 
@@ -95,9 +95,9 @@
             label3.AutoSize = true;
             label3.Location = new Point(29, 181);
             label3.Name = "label3";
-            label3.Size = new Size(111, 20);
+            label3.Size = new Size(151, 20);
             label3.TabIndex = 8;
-            label3.Text = "ID del Personal:";
+            label3.Text = "Nombre del Personal:";
             // 
             // label4
             // 
@@ -197,25 +197,26 @@
             Controls.Add(label5);
             Controls.Add(DatePlanned);
             Controls.Add(label4);
-            Controls.Add(IdPersonal);
+            Controls.Add(personalName);
             Controls.Add(label3);
-            Controls.Add(idPet);
+            Controls.Add(petName);
             Controls.Add(label2);
-            Controls.Add(idClient);
+            Controls.Add(clientName);
             Controls.Add(label1);
             Name = "CitasForm";
             Text = "CitasForm";
+            Load += CitasForm_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox idClient;
+        private TextBox clientName;
         private Label label1;
-        private TextBox idPet;
+        private TextBox petName;
         private Label label2;
-        private TextBox IdPersonal;
+        private TextBox personalName;
         private Label label3;
         private Label label4;
         private DateTimePicker DatePlanned;

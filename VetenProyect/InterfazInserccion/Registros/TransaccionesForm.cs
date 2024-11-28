@@ -12,8 +12,7 @@ namespace VetenProyect.InterfazInserccion.Registros
         private void add_Click(object sender, EventArgs e)
         {
             decimal Amount;
-            int IdClient;
-            if (string.IsNullOrEmpty(idClient.Text) || string.IsNullOrEmpty(type.Text) || string.IsNullOrEmpty(Paymethod.Text)
+            if (string.IsNullOrEmpty(clientName.Text) || string.IsNullOrEmpty(type.Text) || string.IsNullOrEmpty(Paymethod.Text)
                 || string.IsNullOrEmpty(amount.Text) || string.IsNullOrEmpty(description.Text) || string.IsNullOrEmpty(state.Text))
             {
                 MessageBox.Show("Llene el formulario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -23,7 +22,6 @@ namespace VetenProyect.InterfazInserccion.Registros
             try
             {
                Amount = Convert.ToDecimal(amount.Text);
-               IdClient = Convert.ToInt32(idClient.Text);
             }
             catch (FormatException)
             {
@@ -31,11 +29,13 @@ namespace VetenProyect.InterfazInserccion.Registros
                 return;
             }
 
-            Transacciones transaccion = new(IdClient, DatePlanned.Value, type.Text, Paymethod.Text, Amount, description.Text, state.Text);
-            if (transaccion.agregarTransaccion() == true) { MessageBox.Show("Registro de Transaccion agregado exitosamente", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+            Transacciones transaccion = new(clientName.Text, DatePlanned.Value, type.Text, Paymethod.Text, Amount, description.Text, state.Text);
+            string result = transaccion.agregarTransaccion();
+
+            if (result == "1") { MessageBox.Show("Registro de Transaccion agregado exitosamente", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information); }
             else
             {
-                MessageBox.Show("Error al agregar registro de transaccion", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"ERROR: {result}", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }

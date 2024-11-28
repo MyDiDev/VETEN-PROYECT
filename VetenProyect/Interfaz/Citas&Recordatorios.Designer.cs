@@ -69,6 +69,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Form13";
             Text = "VETEN-Citas/Recordatorios";
+            Load += Form13_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

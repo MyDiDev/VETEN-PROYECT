@@ -93,9 +93,9 @@
             label3.AutoSize = true;
             label3.Location = new Point(115, 383);
             label3.Name = "label3";
-            label3.Size = new Size(124, 20);
+            label3.Size = new Size(164, 20);
             label3.TabIndex = 6;
-            label3.Text = "ID del Proveedor:";
+            label3.Text = "Nombre del Proveedor:";
             // 
             // unitaryPrice
             // 
@@ -144,7 +144,7 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
-            // ProductosForm
+            // AddProductosForm
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -162,7 +162,7 @@
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.SizableToolWindow;
             Icon = (Icon)resources.GetObject("$this.Icon");
-            Name = "ProductosForm";
+            Name = "AddProductosForm";
             Text = "VETEN-Agregar Producto";
             ResumeLayout(false);
             PerformLayout();

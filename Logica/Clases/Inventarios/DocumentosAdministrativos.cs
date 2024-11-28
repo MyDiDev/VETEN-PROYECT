@@ -18,9 +18,9 @@ namespace Logica.Clases.Historiales
         public DateTime FechaActualizacion;
         public string Ubicacion;
         public decimal PrecioUnitario;
-        public int IDProveedor;
+        public string NombreProveedor;
 
-        public DocumentosAdministrativos(string nombre, string tipo, string descripcion, int cantidad, string formato, DateTime fechaCreacion, DateTime fechaActualizacion, string ubicacion, decimal precioUnitario, int iDProveedor)
+        public DocumentosAdministrativos(string nombre, string tipo, string descripcion, int cantidad, string formato, DateTime fechaCreacion, DateTime fechaActualizacion, string ubicacion, decimal precioUnitario, string nombreProveedor)
         {
             Nombre = nombre;
             Tipo = tipo;
@@ -31,14 +31,14 @@ namespace Logica.Clases.Historiales
             FechaActualizacion = fechaActualizacion;
             Ubicacion = ubicacion;
             PrecioUnitario = precioUnitario;
-            IDProveedor = iDProveedor;
+            NombreProveedor = nombreProveedor;
         }
 
         Connection connection = new();
 
-        public bool agregarDocumentoAdmin()
+        public string agregarDocumentoAdmin()
         {
-            return connection.AgregarDocumentoAdmin(Nombre, Tipo, Descripcion, Cantidad, Formato, FechaCreacion, FechaActualizacion, Ubicacion, PrecioUnitario, IDProveedor);
+            return connection.AgregarDocumentoAdmin(Nombre, Tipo, Descripcion, Cantidad, Formato, FechaCreacion, FechaActualizacion, Ubicacion, PrecioUnitario, NombreProveedor);
         }
     }
 }

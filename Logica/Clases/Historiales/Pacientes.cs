@@ -9,23 +9,23 @@ namespace Logica.Clases.Historiales
         public string Raza;
         public int Edad;
         public string Genero;
-        public int IdCliente;
+        public string NombreCliente;
 
-        public Pacientes(string nombre, string especie, string raza, int edad, string genero, int idCliente)
+        public Pacientes(string nombre, string especie, string raza, int edad, string genero, string nombreCliente)
         {
             Nombre = nombre;
             Especie = especie;
             Raza = raza;
             Edad = edad;
             Genero = genero;
-            IdCliente = idCliente;
+            NombreCliente = nombreCliente;
         }
 
         Connection connection = new();
 
-        public bool agregarPaciente()
+        public string agregarPaciente()
         {
-            return connection.AgregarPaciente(Nombre, Especie, Raza, Edad, Genero, IdCliente);
+            return connection.AgregarPaciente(Nombre, Especie, Raza, Edad, Genero, NombreCliente);
         }
     }
 }

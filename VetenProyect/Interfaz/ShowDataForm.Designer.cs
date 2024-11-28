@@ -164,6 +164,7 @@
             Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ShowDataForm";
             Text = "VETEN-Historial de Interacciones";
+            Load += ShowDataForm_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();

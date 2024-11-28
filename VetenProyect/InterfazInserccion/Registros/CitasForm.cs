@@ -11,12 +11,11 @@ namespace VetenProyect.InterfazInserccion.Registros
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int IDClient;
             int IDPet;
             int IDPersonal;
             DateTime dateSelected = DatePlanned.Value;
             DateTime now = DateTime.Now;
-            if (string.IsNullOrEmpty(idClient.Text) || string.IsNullOrEmpty(idPet.Text) || string.IsNullOrEmpty(IdPersonal.Text)
+            if (string.IsNullOrEmpty(clientName.Text) || string.IsNullOrEmpty(petName.Text) || string.IsNullOrEmpty(personalName.Text)
                 || string.IsNullOrEmpty(serviceType.Text) || string.IsNullOrEmpty(petState.Text) || string.IsNullOrEmpty(observaciones.Text))
             {
                 MessageBox.Show("Llene el formulario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -25,9 +24,8 @@ namespace VetenProyect.InterfazInserccion.Registros
 
             try
             {
-                IDClient = Convert.ToInt32(idClient.Text);
-                IDPet = Convert.ToInt32(idPet.Text);
-                IDPersonal = Convert.ToInt32(IdPersonal.Text);
+                IDPet = Convert.ToInt32(petName.Text);
+                IDPersonal = Convert.ToInt32(personalName.Text);
             }
             catch (FormatException)
             {
@@ -41,9 +39,17 @@ namespace VetenProyect.InterfazInserccion.Registros
                 return;
             }
 
-            Cita cita = new(IDClient, IDPet, IDPersonal, dateSelected, serviceType.Text, petState.Text, observaciones.Text); 
-            if (cita.planearCita() == true) { MessageBox.Show("Registro de Cita agregado exitosamente", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information); }
-            else { MessageBox.Show("Error al agregar registro de cita, intente nuevamente", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            Cita cita = new(clientName.Text, petName.Text, personalName.Text, dateSelected, serviceType.Text, petState.Text, observaciones.Text);
+            string result = cita.planearCita();
+
+            if (result == "1") { MessageBox.Show("Registro de Cita agregado exitosamente", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information); }
+
+            else { MessageBox.Show($"ERROR: {result}", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        }
+
+        private void CitasForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

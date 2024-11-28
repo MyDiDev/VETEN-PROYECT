@@ -36,7 +36,7 @@
             race = new TextBox();
             label4 = new Label();
             label5 = new Label();
-            idClient = new TextBox();
+            clientName = new TextBox();
             addBtn = new Button();
             label6 = new Label();
             age = new TextBox();
@@ -113,17 +113,17 @@
             label5.AutoSize = true;
             label5.Location = new Point(376, 285);
             label5.Name = "label5";
-            label5.Size = new Size(102, 20);
+            label5.Size = new Size(142, 20);
             label5.TabIndex = 11;
-            label5.Text = "ID del Cliente:";
+            label5.Text = "Nombre del Cliente:";
             // 
-            // idClient
+            // clientName
             // 
-            idClient.Anchor = AnchorStyles.None;
-            idClient.Location = new Point(376, 320);
-            idClient.Name = "idClient";
-            idClient.Size = new Size(238, 27);
-            idClient.TabIndex = 10;
+            clientName.Anchor = AnchorStyles.None;
+            clientName.Location = new Point(376, 320);
+            clientName.Name = "clientName";
+            clientName.Size = new Size(238, 27);
+            clientName.TabIndex = 10;
             // 
             // addBtn
             // 
@@ -172,7 +172,7 @@
             Controls.Add(age);
             Controls.Add(addBtn);
             Controls.Add(label5);
-            Controls.Add(idClient);
+            Controls.Add(clientName);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(race);
@@ -197,7 +197,7 @@
         private TextBox race;
         private Label label4;
         private Label label5;
-        private TextBox idClient;
+        private TextBox clientName;
         private Button addBtn;
         private Label label6;
         private TextBox age;

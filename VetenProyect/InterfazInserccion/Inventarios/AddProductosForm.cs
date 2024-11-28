@@ -14,15 +14,16 @@ namespace VetenProyect.InterfazInserccion.Inventarios
         {
             string Nombre = name.Text;
             string Descripcion = description.Text;
-            int idProveedor = Convert.ToInt32(IdProveedor.Text);
             double precioUnitario = Convert.ToDouble(unitaryPrice.Text);
             int cantidad = Convert.ToInt32(amount.Text);
 
-            Productos productos = new Productos(Nombre, Descripcion, idProveedor, precioUnitario, cantidad);
-            if (productos.agregarProducto() == true) { MessageBox.Show("Producto Agregado Correctamente!", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information); Close(); }
+            Productos productos = new Productos(Nombre, Descripcion, IdProveedor.Text, precioUnitario, cantidad);
+            string result = productos.agregarProducto();
+
+            if (result == "1") { MessageBox.Show("Producto Agregado Correctamente!", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information); Close(); }
             else
             {
-                MessageBox.Show("Error: El ID proveedor no esta registrado", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show($"ERROR: {result}", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }

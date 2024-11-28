@@ -21,9 +21,9 @@ namespace Logica.Clases.Extra
 
         Connection connection = new Connection();
 
-        public bool agregarMascota(int idDuenio)
+        public string agregarMascota(string nombreCliente)
         {
-            return connection.AgregarMascota(idDuenio, Nombre, Especie, Raza, Edad, Genero);
+            return connection.AgregarMascota(nombreCliente, Nombre, Especie, Raza, Edad, Genero);
         }
 
         public int conseguirId(string Tabla, string ColumnaTarget, string ColumnaWhere, string ValorWhere)

@@ -54,7 +54,7 @@ namespace VetenProyect
                     proveedorForm.ShowDialog();
                     break;
                 case "PRODUCTOS":
-                    Form15 productosForm = new();
+                    AddProductosForm productosForm = new();
                     productosForm.ShowDialog();
                     break;
                 case "DIAGNOSTICOS":
@@ -78,7 +78,7 @@ namespace VetenProyect
                     personalForm.ShowDialog();
                     break;
                 default:
-                    MessageBox.Show("No se pudo encontrar Ventana de agregacion","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                    MessageBox.Show("No se pudo encontrar Ventana de agregacion", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     break;
             }
             RecagarDatos();
@@ -320,6 +320,11 @@ namespace VetenProyect
                     dataGridView1.DataSource = connection.GetTable("Personal");
                     break;
             }
+        }
+
+        private void ShowDataForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

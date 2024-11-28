@@ -47,7 +47,7 @@
             label8 = new Label();
             unitaryPrice = new TextBox();
             label9 = new Label();
-            IdProveedor = new TextBox();
+            proveedorName = new TextBox();
             label10 = new Label();
             button1 = new Button();
             SuspendLayout();
@@ -215,13 +215,13 @@
             label9.TabIndex = 30;
             label9.Text = "Precio Unitario:";
             // 
-            // IdProveedor
+            // proveedorName
             // 
-            IdProveedor.Anchor = AnchorStyles.None;
-            IdProveedor.Location = new Point(82, 642);
-            IdProveedor.Name = "IdProveedor";
-            IdProveedor.Size = new Size(298, 27);
-            IdProveedor.TabIndex = 33;
+            proveedorName.Anchor = AnchorStyles.None;
+            proveedorName.Location = new Point(82, 642);
+            proveedorName.Name = "proveedorName";
+            proveedorName.Size = new Size(298, 27);
+            proveedorName.TabIndex = 33;
             // 
             // label10
             // 
@@ -229,9 +229,9 @@
             label10.AutoSize = true;
             label10.Location = new Point(82, 604);
             label10.Name = "label10";
-            label10.Size = new Size(124, 20);
+            label10.Size = new Size(164, 20);
             label10.TabIndex = 32;
-            label10.Text = "ID del Proveedor:";
+            label10.Text = "Nombre del Proveedor:";
             // 
             // button1
             // 
@@ -250,7 +250,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(844, 769);
             Controls.Add(button1);
-            Controls.Add(IdProveedor);
+            Controls.Add(proveedorName);
             Controls.Add(label10);
             Controls.Add(unitaryPrice);
             Controls.Add(label9);
@@ -297,7 +297,7 @@
         private Label label8;
         private TextBox unitaryPrice;
         private Label label9;
-        private TextBox IdProveedor;
+        private TextBox proveedorName;
         private Label label10;
         private Button button1;
     }

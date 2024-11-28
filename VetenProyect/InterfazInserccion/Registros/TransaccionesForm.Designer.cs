@@ -37,7 +37,7 @@
             label3 = new Label();
             type = new TextBox();
             label2 = new Label();
-            idClient = new TextBox();
+            clientName = new TextBox();
             label1 = new Label();
             Paymethod = new ComboBox();
             label7 = new Label();
@@ -128,13 +128,13 @@
             label2.TabIndex = 18;
             label2.Text = "Tipo de Transaccion:";
             // 
-            // idClient
+            // clientName
             // 
-            idClient.Anchor = AnchorStyles.None;
-            idClient.Location = new Point(35, 97);
-            idClient.Name = "idClient";
-            idClient.Size = new Size(298, 27);
-            idClient.TabIndex = 17;
+            clientName.Anchor = AnchorStyles.None;
+            clientName.Location = new Point(35, 97);
+            clientName.Name = "clientName";
+            clientName.Size = new Size(298, 27);
+            clientName.TabIndex = 17;
             // 
             // label1
             // 
@@ -142,9 +142,9 @@
             label1.AutoSize = true;
             label1.Location = new Point(35, 59);
             label1.Name = "label1";
-            label1.Size = new Size(102, 20);
+            label1.Size = new Size(142, 20);
             label1.TabIndex = 16;
-            label1.Text = "ID del Cliente:";
+            label1.Text = "Nombre del Cliente:";
             // 
             // Paymethod
             // 
@@ -203,7 +203,7 @@
             Controls.Add(label3);
             Controls.Add(type);
             Controls.Add(label2);
-            Controls.Add(idClient);
+            Controls.Add(clientName);
             Controls.Add(label1);
             Name = "TransaccionesForm";
             Text = "Agregar Transaccion";
@@ -223,7 +223,7 @@
         private Label label3;
         private TextBox type;
         private Label label2;
-        private TextBox idClient;
+        private TextBox clientName;
         private Label label1;
         private ComboBox Paymethod;
         private Label label7;

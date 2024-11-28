@@ -7,29 +7,29 @@ namespace Logica.Clases.Inventarios
 
         private string Nombre;
         private string Descripcion;
-        private int ID_Proveedor;
+        private string NombreProveedor;
         private double Precio_Unitario;
         private int Cantidad;
 
         public Productos(
             string nombre,
             string descripcion,
-            int idProveedor,
+            string nombreProveedor,
             double precioUnitario,
             int cantidad)
         {
             Nombre = nombre;
             Descripcion = descripcion;
-            ID_Proveedor = idProveedor;
+            NombreProveedor = nombreProveedor;
             Precio_Unitario = precioUnitario;
             Cantidad = cantidad;
         }
 
         Connection connection = new();
 
-        public bool agregarProducto()
+        public string agregarProducto()
         {
-            return connection.AgregarProducto(Nombre, Descripcion, ID_Proveedor, Precio_Unitario, Cantidad);
+            return connection.AgregarProducto(Nombre, Descripcion, NombreProveedor, Precio_Unitario, Cantidad);
         }
     }
 }

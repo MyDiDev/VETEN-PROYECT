@@ -1,12 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using Datos;
 
 namespace VetenProyect
 {
@@ -20,6 +12,13 @@ namespace VetenProyect
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
+        }
+
+        private void Form13_Load(object sender, EventArgs e)
+        {
+            Connection conn = new();
+            dataGridView1.DataSource = conn.GetTable("Citas_Recordatorios");
+            conn.CheckCitaDate(DateTime.Now, (int)dataGridView1.Rows[0].Cells[0].Value);
         }
     }
 }

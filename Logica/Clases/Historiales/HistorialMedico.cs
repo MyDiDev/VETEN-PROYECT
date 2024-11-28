@@ -5,22 +5,22 @@ namespace Logica.Clases.Historiales
     public class HistorialMedico
     {
 
-        public int IdPaciente;
+        public string NombrePaciente;
         public DateTime Fecha;
         public string NotasGenerales;
 
-        public HistorialMedico(int idPaciente, DateTime fecha, string notasGenerales)
+        public HistorialMedico(string nombrePaciente, DateTime fecha, string notasGenerales)
         {
-            IdPaciente = idPaciente;
+            NombrePaciente = nombrePaciente;
             Fecha = fecha;
             NotasGenerales = notasGenerales;
         }
 
         Connection connection = new();
 
-        public bool agregarHistorialMedico()
+        public string agregarHistorialMedico()
         {
-            return connection.AgregarHistorialMedico(IdPaciente, Fecha, NotasGenerales);
+            return connection.AgregarHistorialMedico(NombrePaciente, Fecha, NotasGenerales);
         }
     }
 }
