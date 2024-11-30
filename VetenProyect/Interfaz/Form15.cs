@@ -53,38 +53,22 @@
 
         private void pictureBox9_Click(object sender, EventArgs e)
         {
-            ServiceForm f8 = new ServiceForm();
-            f8.serviceLabel.Text = "CONSULTA GENERAL Y DIAGNOSTICO";
-            f8.serviceImage.Image = null;
-            f8.serviceImage.Image = Image.FromFile("C:\\Users\\Dlsr2\\OneDrive\\Imágenes\\diagnostic_and_analisys_img.png");
-            f8.ShowDialog();
+
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            ServiceForm f8 = new ServiceForm();
-            f8.serviceLabel.Text = "CIRUGIA DE ESTERIZALISACION/CASTRACION";
-            f8.serviceImage.Image = null;
-            f8.serviceImage.Image = Image.FromFile("C:\\Users\\Dlsr2\\OneDrive\\Imágenes\\veterinarian_img.png");
-            f8.ShowDialog();
+
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            ServiceForm f8 = new ServiceForm();
-            f8.serviceLabel.Text = "RADIOGRAFIA VETERINARIA";
-            f8.serviceImage.Image = null;
-            f8.serviceImage.Image = Image.FromFile("C:\\Users\\Dlsr2\\OneDrive\\Imágenes\\veterinarian_xray.png");
-            f8.ShowDialog();
+
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            ServiceForm f8 = new ServiceForm();
-            f8.serviceLabel.Text = "VACUNACION Y DESPARASITACION";
-            f8.serviceImage.Image = null;
-            f8.serviceImage.Image = Image.FromFile("C:\\Users\\Dlsr2\\OneDrive\\Imágenes\\vacuna_img.png");
-            f8.ShowDialog();
+
         }
     }
 }

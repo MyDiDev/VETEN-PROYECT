@@ -14,6 +14,7 @@ namespace VetenProyect.Interfaz
             FormClosing += mainForm_close;
         }
 
+        public string clientName;
         private void mainForm_close(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Seguro quieres salir de la aplicacion?", "Salir De Aplicacion", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Warning);
@@ -75,6 +76,7 @@ namespace VetenProyect.Interfaz
             ActivateButton(sender, Color.FromArgb(194, 255, 199));
 
             Form13 f13 = new();
+            f13.clientName = clientName;
             OpenForm(f13);
         }
 
@@ -83,6 +85,7 @@ namespace VetenProyect.Interfaz
             ActivateButton(sender, Color.FromArgb(194, 255, 199));
 
             ServicesForm form = new();
+            form.clientName = clientName;
             OpenForm(form);
         }
 
@@ -103,10 +106,11 @@ namespace VetenProyect.Interfaz
         private void btnHistoriales_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(194, 255, 199));
+
             DataForm f10 = new DataForm();
             f10.adminTaskTypeLabel.Text = "HISTORIALES";
             f10.btn1.Text = "PACIENTES";
-            //f10.btn2.Text = "DUEÑOS";
+            f10.btn2.Text = "CITAS & RECORDATORIOS";
             f10.btn3.Text = "HISTORIAL MEDICO";
             f10.btn4.Text = "VISITAS";
             f10.btn5.Text = "DIAGNOSTICOS";
@@ -116,6 +120,7 @@ namespace VetenProyect.Interfaz
         private void iconButton7_Click(object sender, EventArgs e)
         {
             ActivateButton(sender, Color.FromArgb(194, 255, 199));
+
             DataForm f10 = new DataForm();
             f10.adminTaskTypeLabel.Text = "REGISTROS";
             f10.btn1.Text = "CITAS";
@@ -128,7 +133,10 @@ namespace VetenProyect.Interfaz
 
         private void iconButton5_Click(object sender, EventArgs e)
         {
-
+            ActivateButton(sender, Color.FromArgb(194, 255, 199));
+            RegisterMascot petForm = new();
+            petForm.clientName = clientName;
+            OpenForm(petForm);
         }
 
         private void iconButton1_Click(object sender, EventArgs e)

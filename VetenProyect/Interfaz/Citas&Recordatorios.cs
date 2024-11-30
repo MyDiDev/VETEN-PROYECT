@@ -9,6 +9,8 @@ namespace VetenProyect
             InitializeComponent();
         }
 
+        public string clientName;
+
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
@@ -17,8 +19,9 @@ namespace VetenProyect
         private void Form13_Load(object sender, EventArgs e)
         {
             Connection conn = new();
-            dataGridView1.DataSource = conn.GetTable("Citas_Recordatorios");
-            conn.CheckCitaDate(DateTime.Now, (int)dataGridView1.Rows[0].Cells[0].Value);
+            dataGridView1.DataSource = conn.GetCitasRecordatorios(clientName);
+            int dateID = Convert.ToInt32(dataGridView1.Rows[0].Cells[0].Value);
+            conn.CheckCitaDate(DateTime.Now, dateID);
         }
     }
 }

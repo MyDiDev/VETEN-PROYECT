@@ -49,6 +49,9 @@ namespace VetenProyect
                 case "CLIENTES":
                     f11.dataGridView1.DataSource = connection.GetTable("Clientes");
                     break;
+                case "CITAS & RECORDATORIOS":
+                    f11.dataGridView1.DataSource = connection.GetTable("Citas_Recordatorios");
+                    break;
             }
 
             f11.ShowDialog();

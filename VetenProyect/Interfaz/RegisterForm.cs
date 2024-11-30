@@ -7,6 +7,7 @@ namespace VetenProyect
         public RegisterForm()
         {
             InitializeComponent();
+            MaximizeBox = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -19,7 +20,16 @@ namespace VetenProyect
             }
 
             Usuarios usuario = new Usuarios(nameBox.Text, addressBox.Text, phoneBox.Text, emailBox.Text, passBox.Text);
-            usuario.agregarUsuario("ADMIN");
+            if (usuario.agregarUsuario("USUARIO") == true) {
+                MessageBox.Show("Usuario registrado a la aplicacion exitosamente!", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information); ;
+                Close();
+                return;
+            }
+            else
+            {
+                MessageBox.Show("No se pudo registrar, intente nuevamente", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
 
         }
     }

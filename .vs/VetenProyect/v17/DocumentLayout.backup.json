@@ -3,76 +3,64 @@
   "WorkspaceRootPath": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4395981F-2516-48C0-90AF-2AB2585611B5}|Datos\\Datos.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\datos\\acceso\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4395981F-2516-48C0-90AF-2AB2585611B5}|Datos\\Datos.csproj|solutionrelative:datos\\acceso\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\vetenproyect\\interfaz\\servicesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\servicesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\vetenproyect\\interfaz\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\vetenproyect\\interfaz\\serviceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\serviceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\vetenproyect\\interfaz\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\vetenproyect\\interfaz\\form15.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\form15.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\vetenproyect\\interfaz\\citas\u0026recordatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\citas\u0026recordatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\vetenproyect\\interfaz\\citas\u0026recordatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\citas\u0026recordatorios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\vetenproyect\\interfaz\\showdataform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\showdataform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\vetenproyect\\interfaz\\showdataform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\showdataform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\vetenproyect\\interfazinserccion\\inventarios\\addproductosform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfazinserccion\\inventarios\\addproductosform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\vetenproyect\\interfazinserccion\\historiales\\historialmedicoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfazinserccion\\historiales\\historialmedicoform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\vetenproyect\\interfazinserccion\\historiales\\pacienteform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfazinserccion\\historiales\\pacienteform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\vetenproyect\\interfazinserccion\\registros\\citasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfazinserccion\\registros\\citasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6886449F-3637-49D5-8F6C-C5CC251F0002}|Logica\\Logica.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\logica\\clases\\registros\\cita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6886449F-3637-49D5-8F6C-C5CC251F0002}|Logica\\Logica.csproj|solutionrelative:logica\\clases\\registros\\cita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\vetenproyect\\interfaz\\planearcita1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\planearcita1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6886449F-3637-49D5-8F6C-C5CC251F0002}|Logica\\Logica.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\logica\\clases\\extra\\mascota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6886449F-3637-49D5-8F6C-C5CC251F0002}|Logica\\Logica.csproj|solutionrelative:logica\\clases\\extra\\mascota.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6886449F-3637-49D5-8F6C-C5CC251F0002}|Logica\\Logica.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\logica\\clases\\inventarios\\documentosadministrativos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6886449F-3637-49D5-8F6C-C5CC251F0002}|Logica\\Logica.csproj|solutionrelative:logica\\clases\\inventarios\\documentosadministrativos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\vetenproyect\\interfaz\\dataform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\dataform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\vetenproyect\\interfaz\\planearcita3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\planearcita3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\vetenproyect\\interfaz\\dataform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\dataform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6886449F-3637-49D5-8F6C-C5CC251F0002}|Logica\\Logica.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\logica\\clases\\registros\\transacciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6886449F-3637-49D5-8F6C-C5CC251F0002}|Logica\\Logica.csproj|solutionrelative:logica\\clases\\registros\\transacciones.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\vetenproyect\\interfaz\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\vetenproyect\\interfaz\\planearcita3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\planearcita3.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{4395981F-2516-48C0-90AF-2AB2585611B5}|Datos\\Datos.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\datos\\acceso\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4395981F-2516-48C0-90AF-2AB2585611B5}|Datos\\Datos.csproj|solutionrelative:datos\\acceso\\connection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\vetenproyect\\interfaz\\planearcita2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\planearcita2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\vetenproyect\\interfaz\\serviceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\serviceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\vetenproyect\\interfaz\\payserviceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\payserviceform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\vetenproyect\\interfaz\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\vetenproyect\\interfaz\\productoforn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\productoforn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|c:\\users\\dlsr2\\source\\repos\\vetenproyect\\vetenproyect\\interfaz\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{212AEC16-2715-460A-8AE9-743C43537743}|VetenProyect\\VetenProyect.csproj|solutionrelative:vetenproyect\\interfaz\\registerform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -82,223 +70,197 @@
       "DocumentGroups": [
         {
           "DockedWidth": 544,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LogInForm.cs",
-              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\LogInForm.cs",
-              "RelativeDocumentMoniker": "VetenProyect\\Interfaz\\LogInForm.cs",
-              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\LogInForm.cs",
-              "RelativeToolTip": "VetenProyect\\Interfaz\\LogInForm.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAIwBwAAAAjAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\MainForm.cs",
+              "RelativeDocumentMoniker": "VetenProyect\\Interfaz\\MainForm.cs",
+              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\MainForm.cs [Design]",
+              "RelativeToolTip": "VetenProyect\\Interfaz\\MainForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T01:45:22.494Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-30T21:00:06.216Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LogInForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\LogInForm.cs",
-              "RelativeDocumentMoniker": "VetenProyect\\Interfaz\\LogInForm.cs",
-              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\LogInForm.cs [Design]",
-              "RelativeToolTip": "VetenProyect\\Interfaz\\LogInForm.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "ServicesForm.cs",
+              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\ServicesForm.cs",
+              "RelativeDocumentMoniker": "VetenProyect\\Interfaz\\ServicesForm.cs",
+              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\ServicesForm.cs",
+              "RelativeToolTip": "VetenProyect\\Interfaz\\ServicesForm.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAUwGMAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T01:45:20.407Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Citas\u0026Recordatorios.cs",
-              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\Citas\u0026Recordatorios.cs",
-              "RelativeDocumentMoniker": "VetenProyect\\Interfaz\\Citas\u0026Recordatorios.cs",
-              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\Citas\u0026Recordatorios.cs",
-              "RelativeToolTip": "VetenProyect\\Interfaz\\Citas\u0026Recordatorios.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAywBQAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T00:45:14.008Z",
+              "WhenOpened": "2024-11-30T20:56:32.812Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "Citas\u0026Recordatorios.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\Citas\u0026Recordatorios.cs",
-              "RelativeDocumentMoniker": "VetenProyect\\Interfaz\\Citas\u0026Recordatorios.cs",
-              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\Citas\u0026Recordatorios.cs [Design]",
-              "RelativeToolTip": "VetenProyect\\Interfaz\\Citas\u0026Recordatorios.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T00:45:09.794Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ShowDataForm.cs",
-              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\ShowDataForm.cs",
-              "RelativeDocumentMoniker": "VetenProyect\\Interfaz\\ShowDataForm.cs",
-              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\ShowDataForm.cs",
-              "RelativeToolTip": "VetenProyect\\Interfaz\\ShowDataForm.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAEwDsAAAAkAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T00:38:30.405Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ShowDataForm.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\ShowDataForm.cs",
-              "RelativeDocumentMoniker": "VetenProyect\\Interfaz\\ShowDataForm.cs",
-              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\ShowDataForm.cs [Design]",
-              "RelativeToolTip": "VetenProyect\\Interfaz\\ShowDataForm.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T00:38:26.019Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AddProductosForm.cs",
-              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\InterfazInserccion\\Inventarios\\AddProductosForm.cs",
-              "RelativeDocumentMoniker": "VetenProyect\\InterfazInserccion\\Inventarios\\AddProductosForm.cs",
-              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\InterfazInserccion\\Inventarios\\AddProductosForm.cs",
-              "RelativeToolTip": "VetenProyect\\InterfazInserccion\\Inventarios\\AddProductosForm.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAEwBAAAABHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T00:35:45.252Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "HistorialMedicoForm.cs",
-              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\InterfazInserccion\\Historiales\\HistorialMedicoForm.cs",
-              "RelativeDocumentMoniker": "VetenProyect\\InterfazInserccion\\Historiales\\HistorialMedicoForm.cs",
-              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\InterfazInserccion\\Historiales\\HistorialMedicoForm.cs",
-              "RelativeToolTip": "VetenProyect\\InterfazInserccion\\Historiales\\HistorialMedicoForm.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAEwBwAAABpAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T00:34:31.573Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "PacienteForm.cs",
-              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\InterfazInserccion\\Historiales\\PacienteForm.cs",
-              "RelativeDocumentMoniker": "VetenProyect\\InterfazInserccion\\Historiales\\PacienteForm.cs",
-              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\InterfazInserccion\\Historiales\\PacienteForm.cs",
-              "RelativeToolTip": "VetenProyect\\InterfazInserccion\\Historiales\\PacienteForm.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAqwCcAAAAWAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T00:32:26.648Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "CitasForm.cs",
-              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\InterfazInserccion\\Registros\\CitasForm.cs",
-              "RelativeDocumentMoniker": "VetenProyect\\InterfazInserccion\\Registros\\CitasForm.cs",
-              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\InterfazInserccion\\Registros\\CitasForm.cs",
-              "RelativeToolTip": "VetenProyect\\InterfazInserccion\\Registros\\CitasForm.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAIAxwC0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T02:04:40.328Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "Mascota.cs",
               "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\Logica\\Clases\\Extra\\Mascota.cs",
               "RelativeDocumentMoniker": "Logica\\Clases\\Extra\\Mascota.cs",
               "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\Logica\\Clases\\Extra\\Mascota.cs",
               "RelativeToolTip": "Logica\\Clases\\Extra\\Mascota.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAASwBcAAAAVAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAiwCAAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T01:58:55.85Z"
+              "WhenOpened": "2024-11-30T20:55:21.39Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PlanearCita1.cs",
+              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\PlanearCita1.cs",
+              "RelativeDocumentMoniker": "VetenProyect\\Interfaz\\PlanearCita1.cs",
+              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\PlanearCita1.cs",
+              "RelativeToolTip": "VetenProyect\\Interfaz\\PlanearCita1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T20:14:42.463Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form15.cs",
+              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\Form15.cs",
+              "RelativeDocumentMoniker": "VetenProyect\\Interfaz\\Form15.cs",
+              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\Form15.cs",
+              "RelativeToolTip": "VetenProyect\\Interfaz\\Form15.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAABCwEYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T20:13:22.258Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "PayServiceForm.cs",
+              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\PayServiceForm.cs",
+              "RelativeDocumentMoniker": "VetenProyect\\Interfaz\\PayServiceForm.cs",
+              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\PayServiceForm.cs",
+              "RelativeToolTip": "VetenProyect\\Interfaz\\PayServiceForm.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T20:13:08.395Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ServiceForm.cs",
+              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\ServiceForm.cs",
+              "RelativeDocumentMoniker": "VetenProyect\\Interfaz\\ServiceForm.cs",
+              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\ServiceForm.cs",
+              "RelativeToolTip": "VetenProyect\\Interfaz\\ServiceForm.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAIA0wBYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T20:12:45.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ServiceForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\ServiceForm.cs",
+              "RelativeDocumentMoniker": "VetenProyect\\Interfaz\\ServiceForm.cs",
+              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\ServiceForm.cs [Design]",
+              "RelativeToolTip": "VetenProyect\\Interfaz\\ServiceForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T20:12:30.604Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 13,
-              "Title": "DocumentosAdministrativos.cs",
-              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\Logica\\Clases\\Inventarios\\DocumentosAdministrativos.cs",
-              "RelativeDocumentMoniker": "Logica\\Clases\\Inventarios\\DocumentosAdministrativos.cs",
-              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\Logica\\Clases\\Inventarios\\DocumentosAdministrativos.cs",
-              "RelativeToolTip": "Logica\\Clases\\Inventarios\\DocumentosAdministrativos.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAIAzwCYAAAAVAAAAAAAAAA==",
+              "Title": "ProductoForn.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\ProductoForn.cs",
+              "RelativeDocumentMoniker": "VetenProyect\\Interfaz\\ProductoForn.cs",
+              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\ProductoForn.cs [Design]",
+              "RelativeToolTip": "VetenProyect\\Interfaz\\ProductoForn.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T01:57:36.856Z"
+              "WhenOpened": "2024-11-30T20:12:09.809Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "Transacciones.cs",
-              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\Logica\\Clases\\Registros\\Transacciones.cs",
-              "RelativeDocumentMoniker": "Logica\\Clases\\Registros\\Transacciones.cs",
-              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\Logica\\Clases\\Registros\\Transacciones.cs",
-              "RelativeToolTip": "Logica\\Clases\\Registros\\Transacciones.cs",
-              "ViewState": "AgIAABkAAAAAAAAAAAAywCMAAAAVAAAAAAAAAA==",
+              "DocumentIndex": 6,
+              "Title": "DataForm.cs",
+              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\DataForm.cs",
+              "RelativeDocumentMoniker": "VetenProyect\\Interfaz\\DataForm.cs",
+              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\DataForm.cs",
+              "RelativeToolTip": "VetenProyect\\Interfaz\\DataForm.cs",
+              "ViewState": "AgIAADEAAAAAAAAAAAAqwFwAAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T22:29:11.822Z"
+              "WhenOpened": "2024-11-30T18:03:09.117Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
+              "Title": "DataForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\DataForm.cs",
+              "RelativeDocumentMoniker": "VetenProyect\\Interfaz\\DataForm.cs",
+              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\DataForm.cs [Design]",
+              "RelativeToolTip": "VetenProyect\\Interfaz\\DataForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T18:03:07.784Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "RegisterForm.cs",
+              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\RegisterForm.cs",
+              "RelativeDocumentMoniker": "VetenProyect\\Interfaz\\RegisterForm.cs",
+              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\RegisterForm.cs",
+              "RelativeToolTip": "VetenProyect\\Interfaz\\RegisterForm.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAIwAkAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T16:16:01.267Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\MainForm.cs",
+              "RelativeDocumentMoniker": "VetenProyect\\Interfaz\\MainForm.cs",
+              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\MainForm.cs",
+              "RelativeToolTip": "VetenProyect\\Interfaz\\MainForm.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAtwFcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-30T14:40:44.236Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Connection.cs",
               "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\Datos\\Acceso\\Connection.cs",
               "RelativeDocumentMoniker": "Datos\\Acceso\\Connection.cs",
               "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\Datos\\Acceso\\Connection.cs",
               "RelativeToolTip": "Datos\\Acceso\\Connection.cs",
-              "ViewState": "AgIAAEMCAAAAAAAAAAAmwE4CAACPAAAAAAAAAA==",
+              "ViewState": "AgIAAPYCAAAAAAAAAAA3wC4DAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T21:16:41.842Z",
+              "WhenOpened": "2024-11-30T14:40:20.052Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 9,
               "Title": "PlanearCita2.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\PlanearCita2.cs",
               "RelativeDocumentMoniker": "VetenProyect\\Interfaz\\PlanearCita2.cs",
               "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\PlanearCita2.cs [Design]",
               "RelativeToolTip": "VetenProyect\\Interfaz\\PlanearCita2.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T14:11:31.537Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Cita.cs",
-              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\Logica\\Clases\\Registros\\Cita.cs",
-              "RelativeDocumentMoniker": "Logica\\Clases\\Registros\\Cita.cs",
-              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\Logica\\Clases\\Registros\\Cita.cs",
-              "RelativeToolTip": "Logica\\Clases\\Registros\\Cita.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAASwB0AAABZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T22:46:30.284Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "PlanearCita3.cs",
-              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\PlanearCita3.cs",
-              "RelativeDocumentMoniker": "VetenProyect\\Interfaz\\PlanearCita3.cs",
-              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\PlanearCita3.cs",
-              "RelativeToolTip": "VetenProyect\\Interfaz\\PlanearCita3.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAIwEIAAAB6AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T22:24:21.255Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "PlanearCita3.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\PlanearCita3.cs",
-              "RelativeDocumentMoniker": "VetenProyect\\Interfaz\\PlanearCita3.cs",
-              "ToolTip": "C:\\Users\\Dlsr2\\source\\repos\\VetenProyect\\VetenProyect\\Interfaz\\PlanearCita3.cs [Design]",
-              "RelativeToolTip": "VetenProyect\\Interfaz\\PlanearCita3.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-23T22:24:18.192Z"
+              "WhenOpened": "2024-11-25T14:11:31.537Z",
+              "EditorCaption": " [Design]"
             }
           ]
         }

@@ -26,9 +26,9 @@ namespace Logica.Clases.Extra
             return connection.AgregarMascota(nombreCliente, Nombre, Especie, Raza, Edad, Genero);
         }
 
-        public int conseguirId(string Tabla, string ColumnaTarget, string ColumnaWhere, string ValorWhere)
+        public List<string> getMascotas(string nombreCliente)
         {
-            return connection.ConseguirId(Tabla, ColumnaTarget, ColumnaWhere, ValorWhere);
+            return connection.GetMascotas(nombreCliente);
         }
     }
 }

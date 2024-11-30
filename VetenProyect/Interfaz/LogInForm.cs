@@ -30,6 +30,7 @@ namespace VetenProyect
             {
                 MessageBox.Show("Registro Encontrado!\nBienvenido Usuario", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 main.adminMark.Visible = false;
+                main.clientName = Name;
                 main.Show();
                 Hide();
             }
@@ -40,6 +41,7 @@ namespace VetenProyect
                 main.btnInventario.Visible = true;
                 main.btnHistoriales.Visible = true;
                 main.iconButton7.Visible = true;
+                main.clientName = Name;
                 main.Show();
                 Hide();
             }

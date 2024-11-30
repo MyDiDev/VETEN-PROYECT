@@ -33,7 +33,7 @@
             textBox1 = new TextBox();
             label2 = new Label();
             label3 = new Label();
-            comboBox1 = new ComboBox();
+            pets = new ComboBox();
             label4 = new Label();
             dateTimePicker1 = new DateTimePicker();
             serviceImage = new PictureBox();
@@ -45,6 +45,7 @@
             // 
             // serviceLabel11
             // 
+            serviceLabel11.Anchor = AnchorStyles.None;
             serviceLabel11.AutoSize = true;
             serviceLabel11.Font = new Font("Segoe UI Black", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             serviceLabel11.ForeColor = SystemColors.ControlLightLight;
@@ -56,6 +57,7 @@
             // 
             // textBox1
             // 
+            textBox1.Anchor = AnchorStyles.None;
             textBox1.BackColor = Color.Ivory;
             textBox1.BorderStyle = BorderStyle.FixedSingle;
             textBox1.ForeColor = SystemColors.ControlLightLight;
@@ -67,6 +69,7 @@
             // 
             // label2
             // 
+            label2.Anchor = AnchorStyles.None;
             label2.AutoSize = true;
             label2.ForeColor = SystemColors.ControlLightLight;
             label2.Location = new Point(69, 209);
@@ -77,6 +80,7 @@
             // 
             // label3
             // 
+            label3.Anchor = AnchorStyles.None;
             label3.AutoSize = true;
             label3.ForeColor = SystemColors.ControlLightLight;
             label3.Location = new Point(75, 316);
@@ -85,18 +89,20 @@
             label3.TabIndex = 12;
             label3.Text = "MASCOTA:";
             // 
-            // comboBox1
+            // pets
             // 
-            comboBox1.BackColor = Color.Ivory;
-            comboBox1.FlatStyle = FlatStyle.Flat;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(75, 361);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(370, 28);
-            comboBox1.TabIndex = 13;
+            pets.Anchor = AnchorStyles.None;
+            pets.BackColor = Color.Ivory;
+            pets.FlatStyle = FlatStyle.Flat;
+            pets.FormattingEnabled = true;
+            pets.Location = new Point(75, 361);
+            pets.Name = "pets";
+            pets.Size = new Size(370, 28);
+            pets.TabIndex = 13;
             // 
             // label4
             // 
+            label4.Anchor = AnchorStyles.None;
             label4.AutoSize = true;
             label4.ForeColor = SystemColors.ControlLightLight;
             label4.Location = new Point(75, 447);
@@ -107,6 +113,7 @@
             // 
             // dateTimePicker1
             // 
+            dateTimePicker1.Anchor = AnchorStyles.None;
             dateTimePicker1.CalendarMonthBackground = Color.White;
             dateTimePicker1.Location = new Point(75, 490);
             dateTimePicker1.Name = "dateTimePicker1";
@@ -115,6 +122,7 @@
             // 
             // serviceImage
             // 
+            serviceImage.Anchor = AnchorStyles.None;
             serviceImage.Image = (Image)resources.GetObject("serviceImage.Image");
             serviceImage.Location = new Point(480, 85);
             serviceImage.Name = "serviceImage";
@@ -125,6 +133,7 @@
             // 
             // button1
             // 
+            button1.Anchor = AnchorStyles.None;
             button1.BackColor = Color.FromArgb(69, 126, 61);
             button1.Cursor = Cursors.Hand;
             button1.FlatStyle = FlatStyle.Flat;
@@ -140,6 +149,7 @@
             // 
             // serviceLabel
             // 
+            serviceLabel.Anchor = AnchorStyles.None;
             serviceLabel.Font = new Font("Segoe UI", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             serviceLabel.ForeColor = Color.Chartreuse;
             serviceLabel.Location = new Point(63, 114);
@@ -164,14 +174,14 @@
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(82, 110, 72);
-            ClientSize = new Size(980, 739);
+            ClientSize = new Size(980, 676);
             Controls.Add(priceServiceLabel);
             Controls.Add(serviceLabel);
             Controls.Add(button1);
             Controls.Add(serviceImage);
             Controls.Add(dateTimePicker1);
             Controls.Add(label4);
-            Controls.Add(comboBox1);
+            Controls.Add(pets);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(textBox1);
@@ -192,12 +202,12 @@
         private TextBox textBox1;
         private Label label2;
         private Label label3;
-        private ComboBox comboBox1;
         private Label label4;
         private DateTimePicker dateTimePicker1;
         private Button button1;
         public Label serviceLabel;
         public PictureBox serviceImage;
         public Label priceServiceLabel;
+        public ComboBox pets;
     }
 }
