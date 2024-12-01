@@ -229,7 +229,7 @@
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label9.ForeColor = SystemColors.ControlLightLight;
-            label9.Location = new Point(272, 612);
+            label9.Location = new Point(256, 620);
             label9.Name = "label9";
             label9.Size = new Size(233, 32);
             label9.TabIndex = 28;
@@ -241,7 +241,7 @@
             priceLabel.AutoSize = true;
             priceLabel.Font = new Font("Segoe UI Black", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             priceLabel.ForeColor = Color.GreenYellow;
-            priceLabel.Location = new Point(490, 612);
+            priceLabel.Location = new Point(495, 620);
             priceLabel.Name = "priceLabel";
             priceLabel.Size = new Size(118, 32);
             priceLabel.TabIndex = 29;

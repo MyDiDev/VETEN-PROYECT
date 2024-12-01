@@ -226,12 +226,13 @@
             // 
             // panel1
             // 
+            panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(999, 665);
+            panel1.Size = new Size(997, 663);
             panel1.TabIndex = 24;
             // 
-            // ProductosForm
+            // Form15
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -255,7 +256,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 4, 3, 4);
-            Name = "ProductosForm";
+            Name = "Form15";
             Text = "VETEN-PRODUCTOS & SERVICIOS";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

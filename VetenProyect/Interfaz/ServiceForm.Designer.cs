@@ -30,12 +30,12 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ServiceForm));
             serviceLabel11 = new Label();
-            textBox1 = new TextBox();
+            clientName = new TextBox();
             label2 = new Label();
             label3 = new Label();
             pets = new ComboBox();
             label4 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            date = new DateTimePicker();
             serviceImage = new PictureBox();
             button1 = new Button();
             serviceLabel = new Label();
@@ -55,17 +55,17 @@
             serviceLabel11.TabIndex = 0;
             serviceLabel11.Text = "SERVICIO: ";
             // 
-            // textBox1
+            // clientName
             // 
-            textBox1.Anchor = AnchorStyles.None;
-            textBox1.BackColor = Color.Ivory;
-            textBox1.BorderStyle = BorderStyle.FixedSingle;
-            textBox1.ForeColor = SystemColors.ControlLightLight;
-            textBox1.Location = new Point(75, 249);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(370, 27);
-            textBox1.TabIndex = 9;
+            clientName.Anchor = AnchorStyles.None;
+            clientName.BackColor = Color.Ivory;
+            clientName.BorderStyle = BorderStyle.FixedSingle;
+            clientName.ForeColor = SystemColors.ControlText;
+            clientName.Location = new Point(75, 249);
+            clientName.Margin = new Padding(3, 4, 3, 4);
+            clientName.Name = "clientName";
+            clientName.Size = new Size(370, 27);
+            clientName.TabIndex = 9;
             // 
             // label2
             // 
@@ -111,14 +111,14 @@
             label4.TabIndex = 15;
             label4.Text = "FECHAS PROGRAMADAS:";
             // 
-            // dateTimePicker1
+            // date
             // 
-            dateTimePicker1.Anchor = AnchorStyles.None;
-            dateTimePicker1.CalendarMonthBackground = Color.White;
-            dateTimePicker1.Location = new Point(75, 490);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(370, 27);
-            dateTimePicker1.TabIndex = 16;
+            date.Anchor = AnchorStyles.None;
+            date.CalendarMonthBackground = Color.White;
+            date.Location = new Point(75, 490);
+            date.Name = "date";
+            date.Size = new Size(370, 27);
+            date.TabIndex = 16;
             // 
             // serviceImage
             // 
@@ -179,12 +179,12 @@
             Controls.Add(serviceLabel);
             Controls.Add(button1);
             Controls.Add(serviceImage);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(date);
             Controls.Add(label4);
             Controls.Add(pets);
             Controls.Add(label3);
             Controls.Add(label2);
-            Controls.Add(textBox1);
+            Controls.Add(clientName);
             Controls.Add(serviceLabel11);
             FormBorderStyle = FormBorderStyle.FixedDialog;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -199,11 +199,11 @@
         #endregion
 
         public Label serviceLabel11;
-        private TextBox textBox1;
+        private TextBox clientName;
         private Label label2;
         private Label label3;
         private Label label4;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker date;
         private Button button1;
         public Label serviceLabel;
         public PictureBox serviceImage;

@@ -1,4 +1,5 @@
-﻿using Microsoft.Windows.Themes;
+﻿using Logica.Clases.Extra;
+using Microsoft.Windows.Themes;
 using System;
 using System.Configuration;
 
@@ -13,7 +14,8 @@ namespace VetenProyect
         }
 
         public decimal Price;
-        
+        public string ClientName;
+
         private Form activeForm = null;
         private void OpenForm(Form form)
         {
@@ -43,8 +45,8 @@ namespace VetenProyect
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(clientName.Text) || string.IsNullOrEmpty(petName.Text) || 
-                string.IsNullOrEmpty(reason.Text) || string.IsNullOrEmpty(petDescription.Text) || string.IsNullOrEmpty(petStateDescription.Text))
+            if (string.IsNullOrEmpty(clientName.Text) || string.IsNullOrEmpty(petName.Text) || string.IsNullOrEmpty(petState.Text) || 
+                string.IsNullOrEmpty(reason.Text) || string.IsNullOrEmpty(petDescription.Text) || string.IsNullOrEmpty(petStateDescription.Text) )
             {
                 MessageBox.Show("LLene el formulario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
@@ -98,7 +100,7 @@ namespace VetenProyect
                     break;
                 default:
                     MessageBox.Show("Seleccione un Tipo de cita valido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Price = 0; 
+                    Price = 0;
                     break;
 
             }
@@ -109,9 +111,37 @@ namespace VetenProyect
             f4.reasonDescription = petStateDescription.Text;
             f4.petDescription = petDescription.Text;
             f4.TipoCita = reason.Text;
+            f4.petState = petState.Text;
             panel1.BringToFront();
             OpenForm(f4);
-            Close();
+
+            clientName.Text = "";
+            petName.Text = "";
+            petStateDescription.Text = "";
+            petDescription.Text = "";
+            reason.Text = "";
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void PlanearCita1_Load(object sender, EventArgs e)
+        {
+            clientName.Text = ClientName;
+
+            Mascota Mascota = new("", "", "", 0, "");
+            List<string> mascotas = Mascota.getMascotas(ClientName);
+
+            if (mascotas.Count == 0){
+                mascotas.Add("No se han encontrado mascotas");
+            }
+
+            foreach (string mascota in mascotas)
+            {
+                petName.Items.Add(mascota);
+            }
         }
     }
 }

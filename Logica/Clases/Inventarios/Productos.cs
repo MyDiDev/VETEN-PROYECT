@@ -31,5 +31,10 @@ namespace Logica.Clases.Inventarios
         {
             return connection.AgregarProducto(Nombre, Descripcion, NombreProveedor, Precio_Unitario, Cantidad);
         }
+
+        public string getProductoPrice(string nombreProducto)
+        {
+            return connection.GetProductoPrice(nombreProducto);
+        }
     }
 }

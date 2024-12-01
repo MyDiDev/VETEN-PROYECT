@@ -143,6 +143,7 @@ namespace VetenProyect.Interfaz
         {
             ActivateButton(sender, Color.FromArgb(194, 255, 199));
             PlanearCita1 cita1 = new();
+            cita1.ClientName = clientName;
             OpenForm(cita1);
         }
 

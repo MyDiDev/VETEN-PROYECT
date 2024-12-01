@@ -97,11 +97,12 @@
             // 
             adminMark.FlatAppearance.BorderSize = 0;
             adminMark.FlatStyle = FlatStyle.Flat;
+            adminMark.Font = new Font("Segoe UI Black", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             adminMark.ForeColor = Color.FromArgb(82, 110, 72);
             adminMark.IconChar = FontAwesome.Sharp.IconChar.A;
             adminMark.IconColor = Color.FromArgb(82, 110, 72);
             adminMark.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            adminMark.Location = new Point(313, 0);
+            adminMark.Location = new Point(314, 12);
             adminMark.Name = "adminMark";
             adminMark.Size = new Size(66, 60);
             adminMark.TabIndex = 25;
@@ -110,11 +111,11 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI Variable Text", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Font = new Font("Segoe UI Variable Small", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = SystemColors.ControlLightLight;
-            label6.Location = new Point(12, 27);
+            label6.Location = new Point(12, 38);
             label6.Name = "label6";
-            label6.Size = new Size(173, 63);
+            label6.Size = new Size(221, 80);
             label6.TabIndex = 37;
             label6.Text = "VETEN";
             // 
@@ -254,10 +255,10 @@
             iconButton3.IconColor = Color.White;
             iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             iconButton3.ImageAlign = ContentAlignment.MiddleLeft;
-            iconButton3.Location = new Point(3, 291);
+            iconButton3.Location = new Point(-2, 291);
             iconButton3.Name = "iconButton3";
             iconButton3.Padding = new Padding(10, 0, 0, 0);
-            iconButton3.Size = new Size(380, 74);
+            iconButton3.Size = new Size(385, 74);
             iconButton3.TabIndex = 20;
             iconButton3.Text = "Servicios";
             iconButton3.TextAlign = ContentAlignment.MiddleLeft;

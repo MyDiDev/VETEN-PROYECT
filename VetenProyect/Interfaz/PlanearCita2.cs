@@ -73,7 +73,9 @@ namespace VetenProyect
             f5.appointmentDate = selectedDate;
             f5.doctor = doctors.Text;
             OpenForm(f5);
-            Close();
+
+            doctors.Text = "";
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

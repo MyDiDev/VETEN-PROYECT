@@ -88,6 +88,7 @@ namespace VetenProyect.Interfaz
 
         private void ServicesForm_Load(object sender, EventArgs e)
         {
+            f8.ClientName = clientName;
             Mascota Mascota = new("", "", "",0,"");
             List<string> mascotas = Mascota.getMascotas(clientName);
 

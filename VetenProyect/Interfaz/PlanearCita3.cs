@@ -24,9 +24,15 @@ namespace VetenProyect
         private void button1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(cardName.Text) || string.IsNullOrEmpty(dateExpired.Text) ||
-                string.IsNullOrEmpty(cardNum.Text) || string.IsNullOrEmpty(cvv.Text) || !masterCheck.Checked && !visaCheck.Checked)
+                string.IsNullOrEmpty(cardNum.Text) || string.IsNullOrEmpty(cvv.Text))
             {
                 MessageBox.Show("LLene el formulario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            if (!masterCheck.Checked && !visaCheck.Checked)
+            {
+                MessageBox.Show("Seleccione un tipo de tarjeta, mastercard/visa", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -61,8 +67,8 @@ namespace VetenProyect
             CitasRecordatorios citasRecordatorios = new(appointmentDate, TipoCita, reasonDescription, petDescription, petState);
             Transacciones transaccion = new(clientName, DateTime.Now, $"Cita de: {TipoCita}", cardType, Price, $"Cita planeada sobre: {TipoCita}", "PAGADO");
 
-
-            if (citasRecordatorios.agregregarCitaRecordatorio(clientName, petName) == "1" && transaccion.agregarTransaccion() == "1")
+            string result = citasRecordatorios.agregregarCitaRecordatorio(clientName, petName);
+            if (result  == "1" && transaccion.agregarTransaccion() == "1")
             {
                 MessageBox.Show("Cita Planeada exitosamente!", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
@@ -70,14 +76,14 @@ namespace VetenProyect
             }
             else
             {
-                MessageBox.Show("No se pudo planear la Cita, Intente nuevamente", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"{result}", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }
 
         private void PlanearCita3_Load(object sender, EventArgs e)
         {
-            priceLabel.Text = Convert.ToString(Price) + "$RDS";
+            priceLabel.Text = Convert.ToString(Price) + " $RDS";
         }
     }
 }

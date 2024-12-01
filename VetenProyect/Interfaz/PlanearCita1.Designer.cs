@@ -33,7 +33,8 @@
             label2 = new Label();
             button1 = new Button();
             panel1 = new Panel();
-            comboBox1 = new ComboBox();
+            petName = new ComboBox();
+            petState = new ComboBox();
             label8 = new Label();
             petDescription = new TextBox();
             label7 = new Label();
@@ -41,7 +42,6 @@
             label5 = new Label();
             reason = new ComboBox();
             label4 = new Label();
-            petName = new TextBox();
             label3 = new Label();
             clientName = new TextBox();
             label6 = new Label();
@@ -54,7 +54,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI Black", 21.75F, FontStyle.Bold);
             label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(295, 22);
+            label1.Location = new Point(301, 22);
             label1.Name = "label1";
             label1.Size = new Size(295, 50);
             label1.TabIndex = 0;
@@ -66,7 +66,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold);
             label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(309, 111);
+            label2.Location = new Point(324, 96);
             label2.Name = "label2";
             label2.Size = new Size(259, 20);
             label2.TabIndex = 4;
@@ -91,7 +91,8 @@
             // 
             // panel1
             // 
-            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(petName);
+            panel1.Controls.Add(petState);
             panel1.Controls.Add(label8);
             panel1.Controls.Add(petDescription);
             panel1.Controls.Add(label7);
@@ -99,7 +100,6 @@
             panel1.Controls.Add(label5);
             panel1.Controls.Add(reason);
             panel1.Controls.Add(label4);
-            panel1.Controls.Add(petName);
             panel1.Controls.Add(label3);
             panel1.Controls.Add(clientName);
             panel1.Controls.Add(label6);
@@ -111,17 +111,28 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(916, 756);
             panel1.TabIndex = 29;
+            panel1.Paint += panel1_Paint;
             // 
-            // comboBox1
+            // petName
             // 
-            comboBox1.Anchor = AnchorStyles.None;
-            comboBox1.BackColor = Color.Ivory;
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Saludable", "Enfermo", "En Recuperación", "Bajo Tratamiento", "En Emergencia", "Convaleciente" });
-            comboBox1.Location = new Point(487, 349);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(281, 28);
-            comboBox1.TabIndex = 38;
+            petName.Anchor = AnchorStyles.None;
+            petName.BackColor = Color.Ivory;
+            petName.FormattingEnabled = true;
+            petName.Location = new Point(487, 224);
+            petName.Name = "petName";
+            petName.Size = new Size(281, 28);
+            petName.TabIndex = 39;
+            // 
+            // petState
+            // 
+            petState.Anchor = AnchorStyles.None;
+            petState.BackColor = Color.Ivory;
+            petState.FormattingEnabled = true;
+            petState.Items.AddRange(new object[] { "Saludable", "Enfermo", "En Recuperación", "Bajo Tratamiento", "En Emergencia", "Convaleciente" });
+            petState.Location = new Point(487, 349);
+            petState.Name = "petState";
+            petState.Size = new Size(281, 28);
+            petState.TabIndex = 38;
             // 
             // label8
             // 
@@ -204,18 +215,6 @@
             label4.TabIndex = 31;
             label4.Text = "TIPO DE CITA:";
             // 
-            // petName
-            // 
-            petName.Anchor = AnchorStyles.None;
-            petName.BackColor = Color.Ivory;
-            petName.BorderStyle = BorderStyle.FixedSingle;
-            petName.ForeColor = Color.Black;
-            petName.Location = new Point(487, 225);
-            petName.Margin = new Padding(3, 4, 3, 4);
-            petName.Name = "petName";
-            petName.Size = new Size(281, 27);
-            petName.TabIndex = 30;
-            // 
             // label3
             // 
             label3.Anchor = AnchorStyles.None;
@@ -262,6 +261,7 @@
             Margin = new Padding(3, 4, 3, 4);
             Name = "PlanearCita1";
             Text = "VETEN-PLANEAR CITA";
+            Load += PlanearCita1_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -273,7 +273,6 @@
         private Label label2;
         private Button button1;
         private Panel panel1;
-        private TextBox petName;
         private Label label3;
         private TextBox clientName;
         private Label label6;
@@ -282,8 +281,9 @@
         private Label label7;
         private TextBox petStateDescription;
         private Label label5;
-        private ComboBox comboBox1;
+        private ComboBox petState;
         private Label label8;
         private ComboBox reason;
+        private ComboBox petName;
     }
 }

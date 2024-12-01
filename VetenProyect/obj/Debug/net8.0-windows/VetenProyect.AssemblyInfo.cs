@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("VetenProyect")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1332e16e647b255cdf3538ef2ddafedf332bc320")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4fb229729f7a7f5896c3491a634bca6f6c0f89f0")]
 [assembly: System.Reflection.AssemblyProductAttribute("VetenProyect")]
 [assembly: System.Reflection.AssemblyTitleAttribute("VetenProyect")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

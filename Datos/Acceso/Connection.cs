@@ -5,6 +5,7 @@ using Microsoft.Win32.SafeHandles;
 using System.Runtime.InteropServices.Marshalling;
 using System.Globalization;
 using System.Runtime.CompilerServices;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Datos
 {
@@ -248,6 +249,40 @@ namespace Datos
             }
         }
 
+        public string GetProductoPrice(string nombreProducto)
+        {
+            try
+            {
+                string price = "";
+
+                using (SqlConnection conn = new SqlConnection("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+                {
+                    conn.Open();
+
+                    using (SqlCommand cmd = new SqlCommand($"SELECT Precio_Unitario FROM Productos_Generales WHERE Nombre='{nombreProducto}'", conn))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                price = $"{reader.GetDecimal(0)}";
+                                return price;
+                            }
+                            else
+                            {
+                                conn.Close();
+                                return $"No se pudo obtener el precio del Producto: {nombreProducto}";
+                            }
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return $"{ex}";
+            }
+        }
+
         //PACIENTES
 
         public string AgregarPaciente(string nombre, string especie, string raza, int edad, string genero, string nombreCliente)
@@ -367,7 +402,7 @@ namespace Datos
                 {
                     conn.Open();
 
-                    using (SqlCommand cmd = new SqlCommand($"SELECT ID_Cliente FROM Clientes WHERE Nombre='{textInfo.ToTitleCase(nombreCliente.ToLower())}'", conn))
+                    using (SqlCommand cmd = new SqlCommand($"SELECT ID_Cliente FROM Clientes WHERE Nombre='{textInfo.ToTitleCase(nombreCliente.ToLower())}';", conn))
                     {
                         using (SqlDataReader read = cmd.ExecuteReader())
                         {
@@ -394,14 +429,83 @@ namespace Datos
                             else
                             {
                                 conn.Close();
-                                return "No se pudo encontrar el Identificador del Paciente, Trate de agregar nuevamente el nombre de la mascota";
+                                return "No se pudo encontrar el Identificador del Paciente, Trate de agregar nuevamente el nombre de la mascota\no quizas su mascota no este registrada en pacientes";
                             }
                         }
                     }
 
-                    using (SqlCommand cmd = new SqlCommand($"SELECT * FROM Citas_Recordatorios WHERE ID_Paciente={idMascota} AND ID_Cliente={idCliente} ", conn))
+                    using (SqlCommand cmd = new SqlCommand($"SELECT * FROM Citas_Recordatorios WHERE ID_Paciente={idMascota} AND ID_Cliente={idCliente};", conn))
                     {
-                        int count = (int)cmd.ExecuteScalar();
+                        int count = Convert.ToInt32(cmd.ExecuteScalar());
+                        if (count > 1)
+                        {
+                            conn.Close();
+                            return "Ya Tienes una cita planeada, vuelve cuando termines a Cita despues de un plazo de 1 semana";
+                        }
+                    }
+
+                    using (SqlCommand cmd = new($"INSERT INTO Citas_Recordatorios (Fecha_Hora, Tipo, ID_Cliente, ID_Paciente, Motivo, Descripcion, Estado) VALUES ('{fechaHora}', '{tipo}', {idCliente}, {idMascota}, '{motivo}', '{descripcion}', '{estado}');", conn))
+                    {
+                        cmd.ExecuteNonQuery();
+                        return "1";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                return $"{ex}";
+            }
+        }
+
+        // OVERLOAD
+
+        public string AgregarCitaRecordatorio(DateTime fechaHora, string tipo, string nombreCliente,
+                              string motivo, string descripcion, string estado)
+        {
+            try
+            {
+                int idCliente = -1;
+                int idMascota = -1;
+
+                using (SqlConnection conn = new SqlConnection("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+                {
+                    conn.Open();
+
+                    using (SqlCommand cmd = new SqlCommand($"SELECT ID_Cliente FROM Clientes WHERE Nombre='{textInfo.ToTitleCase(nombreCliente.ToLower())}';", conn))
+                    {
+                        using (SqlDataReader read = cmd.ExecuteReader())
+                        {
+                            if (read.Read())
+                            {
+                                idCliente = read.GetInt32(0);
+                            }
+                            else
+                            {
+                                conn.Close();
+                                return "No se pudo Econtrar el identificador del Cliente, intente agregar su nombre otra vez";
+                            }
+                        }
+                    }
+
+                    using (SqlCommand cmd = new SqlCommand($"SELECT ID_Mascota FROM Mascotas WHERE ID_Cliente={idCliente};", conn))
+                    {
+                        using (SqlDataReader read = cmd.ExecuteReader())
+                        {
+                            if (read.Read())
+                            {
+                                idMascota = read.GetInt32(0);
+                            }
+                            else
+                            {
+                                conn.Close();
+                                return "No se pudo encontrar el Identificador del Paciente, Trate de agregar nuevamente el nombre de la mascota\no quizas su mascota no este registrada en pacientes";
+                            }
+                        }
+                    }
+
+                    using (SqlCommand cmd = new SqlCommand($"SELECT * FROM Citas_Recordatorios WHERE ID_Paciente={idMascota} AND ID_Cliente={idCliente};", conn))
+                    {
+                        int count = Convert.ToInt32(cmd.ExecuteScalar());
                         if (count > 1)
                         {
                             conn.Close();
@@ -457,6 +561,54 @@ namespace Datos
             catch (Exception)
             {
                 return dataTable;
+            }
+        }
+
+        public string CheckCitaDate(DateTime date, int id)
+        {
+            try
+            {
+                DateTime appointmentDate;
+                string motivo;
+                using (SqlConnection conn = new SqlConnection("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand($"SELECT * FROM Citas_Recordatorios WHERE ID={id};", conn))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                appointmentDate = reader.GetDateTime(1);
+                                motivo = reader.GetString(5);
+                            }
+                            else
+                            {
+                                conn.Close();
+                                return "No se pudo encontrar el identificador de la cita, intente nuevamente";
+                            }
+                        }
+                    }
+
+                    if (date > appointmentDate)
+                    {
+                        using (SqlCommand cmd = new SqlCommand($"DELETE FROM Citas_Recordatorios WHERE ID={id};", conn))
+                        {
+                            cmd.ExecuteNonQuery();
+                            return "";
+                        }
+                    }
+                    else if (date == appointmentDate)
+                    {
+                        return $"!La Cita sobre: {motivo}, Es para Hoy a las {appointmentDate.ToString().Substring(10)}";
+                    }
+                }
+
+                return "No se pudo realizar la operacion";
+            }
+            catch (Exception ex)
+            {
+                return $"{ex}";
             }
         }
 
@@ -568,6 +720,34 @@ namespace Datos
                 return false;
             }
 
+        }
+
+        public List<string> GetPersonal(string Cargo)
+        {
+            List<string> data = new List<string>();
+            try
+            {
+                using (SqlConnection conn = new SqlConnection("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new($"SELECT Nombre FROM Personal WHERE Cargo = '{Cargo}';", conn))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                data.Add(reader["Nombre"].ToString());
+                            }
+
+                            return data;
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                return data;
+            }
         }
 
         // LOG IN
@@ -701,6 +881,52 @@ namespace Datos
             }
         }
 
+        public List<string> GetMascotas(string nombreCliente)
+        {
+            List<string> data = new List<string>();
+            try
+            {
+                int idCliente = -1;
+
+                using (SqlConnection conn = new SqlConnection("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new($"SELECT ID_Cliente FROM Clientes WHERE Nombre='{nombreCliente}';", conn))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                idCliente = reader.GetInt32(0);
+                            }
+                            else
+                            {
+                                data.Add("No se han encontrado mascotas");
+                            }
+                        }
+                    }
+
+                    using (SqlCommand cmd = new($"SELECT Nombre FROM Mascotas WHERE ID_Cliente={idCliente};", conn))
+                    {
+                        using (SqlDataReader reader = cmd.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                data.Add(reader.GetString(0));
+                            }
+
+                            return data;
+                        }
+                    }
+                }
+            }
+            catch (Exception)
+            {
+                data.Add("No se han encontrado mascotas.");
+                return data;
+            }
+        }
+
         // GLOBAL
         public bool EliminarRegistro(string tabla, string columnId, int id)
         {
@@ -768,128 +994,6 @@ namespace Datos
             catch (Exception)
             {
                 return dataTable;
-            }
-        }
-
-        public List<string> GetMascotas(string nombreCliente)
-        {
-            List<string> data = new List<string>();
-            try
-            {
-                int idCliente = -1;
-
-                using (SqlConnection conn = new SqlConnection("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
-                {
-                    conn.Open();
-                    using (SqlCommand cmd = new($"SELECT ID_Cliente FROM Clientes WHERE Nombre='{nombreCliente}';", conn))
-                    {
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                idCliente = reader.GetInt32(0);
-                            }
-                            else
-                            {
-                                data.Add("No se han encontrado mascotas");
-                            }
-                        }
-                    }
-
-                    using (SqlCommand cmd = new($"SELECT Nombre FROM Mascotas WHERE ID_Cliente={idCliente};", conn))
-                    {
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                data.Add(reader.GetString(0));
-                            }
-
-                            return data;
-                        }
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                data.Add("No se han encontrado mascotas.");
-                return data;
-            }
-        }
-
-        public List<string> GetPersonal(string Cargo)
-        {
-            List<string> data = new List<string>();
-            try
-            {
-                using (SqlConnection conn = new SqlConnection("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
-                {
-                    conn.Open();
-                    using (SqlCommand cmd = new($"SELECT Nombre FROM Personal WHERE Cargo = '{Cargo}';", conn))
-                    {
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            while (reader.Read())
-                            {
-                                data.Add(reader["Nombre"].ToString());
-                            }
-
-                            return data;
-                        }
-                    }
-                }
-            }
-            catch (Exception)
-            {
-                return data;
-            }
-        }
-
-        public string CheckCitaDate(DateTime date, int id)
-        {
-            try
-            {
-                DateTime appointmentDate;
-                string motivo;
-                using (SqlConnection conn = new SqlConnection("Data Source=MSI;Initial Catalog=BaseDatosVeterinaria;Integrated Security=True;"))
-                {
-                    conn.Open();
-                    using (SqlCommand cmd = new SqlCommand($"SELECT * FROM Citas_Recordatorios WHERE ID={id};", conn))
-                    {
-                        using (SqlDataReader reader = cmd.ExecuteReader())
-                        {
-                            if (reader.Read())
-                            {
-                                appointmentDate = reader.GetDateTime(1);
-                                motivo = reader.GetString(5);
-                            }
-                            else
-                            {
-                                conn.Close();
-                                return "No se pudo encontrar el identificador de la cita, intente nuevamente";
-                            }
-                        }
-                    }
-
-                    if (date > appointmentDate)
-                    {
-                        using (SqlCommand cmd = new SqlCommand($"DELETE FROM Citas_Recordatorios WHERE ID={id};",conn))
-                        {
-                            cmd.ExecuteNonQuery();
-                            return "";
-                        }
-                    }
-                    else if (date == appointmentDate)
-                    {
-                        return $"!La Cita sobre: {motivo}, Es para Hoy a las {appointmentDate.ToString().Substring(10)}";
-                    }
-                }
-
-                return "No se pudo realizar la operacion";
-            }
-            catch (Exception ex)
-            {
-                return $"{ex}";
             }
         }
     }

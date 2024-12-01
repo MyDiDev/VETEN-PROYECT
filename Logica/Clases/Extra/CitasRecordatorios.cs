@@ -29,6 +29,12 @@ namespace Logica.Clases.Extra
             return connection.AgregarCitaRecordatorio(FechaHora, Tipo, nombreCliente, nombreMascota, Motivo, Descripcion, Estado);
         }
 
+        public string agregregarCitaRecordatorio(string nombreCliente)
+        {
+            return connection.AgregarCitaRecordatorio(FechaHora, Tipo, nombreCliente, Motivo, Descripcion, Estado);
+        }
+
+
         public DataTable getCitasRecordatorios(string nombreCliente)
         {
             return connection.GetCitasRecordatorios(nombreCliente);
